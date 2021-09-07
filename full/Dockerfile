@@ -14,12 +14,10 @@ COPY conf/sshd_config /etc/ssh/sshd_config
 RUN mkdir /root/tools
 RUN curl https://getcroc.schollz.com | bash
 RUN sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-#RUN $ git clone https://github.com/commixproject/commix.git /root/tools/commix
+RUN cd /root/tools && git clone https://github.com/cbk914/PayloadsAllTheThings.git
 
-# Enable ssh
+# setup for ssh
 RUN echo "root:attack" | chpasswd
-#RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
-#RUN service ssh start
 EXPOSE 22
 
 # Cleanup
