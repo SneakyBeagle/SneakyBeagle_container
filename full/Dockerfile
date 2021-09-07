@@ -10,6 +10,9 @@ COPY conf/.zshrc /root/.zshrc
 COPY conf/.vimrc /root/.vimrc
 COPY conf/sshd_config /etc/ssh/sshd_config
 
+# Make zsh default shell
+RUN chsh -s $(which zsh)
+
 # Some more custom tools
 RUN mkdir /root/tools
 RUN curl https://getcroc.schollz.com | bash
