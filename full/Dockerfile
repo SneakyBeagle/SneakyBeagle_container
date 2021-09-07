@@ -12,12 +12,21 @@ COPY conf/.zshrc /root/.zshrc
 RUN mkdir /root/tools
 RUN curl https://getcroc.schollz.com | bash
 RUN sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-#RUN $ git clone https://github.com/commixproject/commix.git /root/tools/commix
+RUN $ git clone https://github.com/commixproject/commix.git /root/tools/commix
+
+# Enable ssh
+RUN echo "root:attackdocker123!" | chpasswd
+RUN sed -i 's/PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+RUN service ssh start
 
 # Cleanup
 RUN apt autoremove -y
 RUN apt autoclean -y
 RUN rm /root/.zshrc.pre-oh-my-zsh
+
+EXPOSE 22
+
+WORKDIR /root/
 
 # aaannnd, done
 ENTRYPOINT ["/bin/zsh"]
