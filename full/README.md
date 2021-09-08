@@ -45,6 +45,7 @@ it fits your needs and is secure enough for your needs.
 - w3m
 - commix
 - vim
+- golang-go
 
 ## Through git:
 - croc (easily share files with any other computer through a secure relay)
