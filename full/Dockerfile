@@ -8,6 +8,7 @@ RUN apt install -y curl netcat-traditional nmap gobuster python3 python3-pip sec
 # Configuration files
 COPY conf/.zshrc /root/.zshrc
 COPY conf/.vimrc /root/.vimrc
+COPY conf/.bashrc /root/.bashrc
 COPY conf/sshd_config /etc/ssh/sshd_config
 
 # Make zsh default shell
