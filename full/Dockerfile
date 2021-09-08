@@ -15,9 +15,10 @@ RUN chsh -s $(which zsh)
 
 # Some more custom tools
 RUN mkdir /root/tools
+RUN mkdir /usr/share/wordlists
 RUN curl https://getcroc.schollz.com | bash
 RUN sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-RUN cd /root/tools && git clone https://github.com/cbk914/PayloadsAllTheThings.git
+RUN cd /usr/share/wordlists && git clone https://github.com/cbk914/PayloadsAllTheThings.git
 
 # setup for ssh
 RUN echo "root:attack" | chpasswd
