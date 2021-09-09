@@ -46,6 +46,7 @@ it fits your needs and is secure enough for your needs.
 - commix
 - vim
 - golang-go
+- mydumper (MySQL backup tool. Nice for DB dumps)
 
 ## Through git:
 - croc (easily share files with any other computer through a secure relay)
