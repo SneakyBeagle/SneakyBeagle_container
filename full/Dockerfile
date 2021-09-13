@@ -3,7 +3,9 @@ FROM kalilinux/kali-bleeding-edge:latest
 # main setup and installation
 RUN apt update
 RUN apt upgrade -y
-RUN apt install -y curl netcat-traditional nmap gobuster python3 python3-pip seclists iproute2 dnsutils iputils-ping testssl.sh emacs-nox sqlmap whois nikto wget ssh exploitdb man-db net-tools zsh git hydra w3m commix vim golang-go mydumper nfs-common
+RUN apt install -y curl netcat-traditional nmap gobuster python3 python3-pip seclists iproute2 dnsutils iputils-ping testssl.sh emacs-nox sqlmap whois nikto wget ssh net-tools zsh git hydra commix vim golang-go mydumper nfs-common
+# Extra packages
+#RUN apt install -y man-db w3m exploitdb
 
 # Configuration files
 COPY conf/.zshrc /root/.zshrc
