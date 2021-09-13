@@ -26,6 +26,7 @@ RUN echo "root:attack" | chpasswd
 EXPOSE 22
 
 # Cleanup
+RUN touch /root/.hushlogin
 RUN apt autoremove -y
 RUN apt autoclean -y
 RUN rm /root/.zshrc.pre-oh-my-zsh
