@@ -19,14 +19,11 @@ RUN mkdir /root/tools
 RUN mkdir /usr/share/wordlists
 RUN curl https://getcroc.schollz.com | bash
 RUN sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
-<<<<<<< HEAD
-=======
 RUN cd /usr/share/wordlists && git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git
 
 # setup for ssh (change password ASAP)
 RUN echo "root:attack" | chpasswd
 EXPOSE 22
->>>>>>> e684f27d6c435ddf215d3d836a8399218677bc7f
 
 # Cleanup
 RUN touch /root/.hushlogin
