@@ -5,7 +5,7 @@ RUN apt update
 RUN apt upgrade -y
 RUN apt install -y curl netcat-traditional nmap gobuster python3 python3-pip seclists iproute2 dnsutils iputils-ping testssl.sh emacs-nox sqlmap whois nikto wget ssh net-tools zsh git hydra commix vim golang-go mydumper nfs-common
 # Extra packages
-#RUN apt install -y man-db w3m exploitdb
+#RUN apt install -y man-db w3m exploitdb smbclient dsniff
 
 # Configuration files
 COPY conf/.zshrc /root/.zshrc
