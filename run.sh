@@ -5,6 +5,10 @@ echo -n "Enter a password to use for the container: "
 read -s password
 echo ""
 
-docker-compose build --build-arg password="$password" --no-cache
+echo -n "Enter the Nessus license key: "
+read -s LICENSE
+echo ""
 
-docker-compose up -d
+docker-compose build --build-arg password="$password" --build-arg LICENSE="$LICENSE" --no-cache
+
+docker-compose up

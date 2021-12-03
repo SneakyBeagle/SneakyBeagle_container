@@ -16,4 +16,5 @@ services:
       context: ./nessus
     ports:
       - "8843:8843"
+    command: /opt/nessus/sbin/nessus-service
     

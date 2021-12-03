@@ -4,8 +4,7 @@ ARG password
 # main setup and installation
 RUN password=$password
 RUN apt-get update
-RUN apt-get install -y curl netcat-traditional nmap gobuster python3 python3-pip seclists iproute2 dnsutils iputils-ping emacs-nox sqlmap whois nikto wget ssh net-tools git nfs-common tcpdump
-# Extra packages
+RUN apt-get install -y curl netcat-traditional nmap gobuster python3 python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois nikto wget ssh net-tools git nfs-common tcpdump
 
 # Configuration files
 COPY conf/.vimrc /root/.vimrc
@@ -23,6 +22,7 @@ RUN curl https://getcroc.schollz.com | bash
 
 # setup for ssh (change password ASAP)
 RUN echo "root:$password" | chpasswd
+RUN service ssh start
 EXPOSE 22
 
 # upgrade packages
@@ -34,8 +34,7 @@ RUN apt-get autoremove -y
 RUN apt-get autoclean -y
 
 # Set working directory
-WORKDIR /root/
+#WORKDIR /root/
 
 # aaannnd, done
-#CMD ["service", "ssh", "start"]
 CMD ["/usr/sbin/sshd", "-D"]
