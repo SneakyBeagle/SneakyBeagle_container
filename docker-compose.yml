@@ -1,0 +1,19 @@
+version: "3"
+services:
+  kali:
+    image: sneakykali
+    container_name: sneakybeagle
+    restart: always
+    build:
+      context: ./kali
+    ports:
+      - "2222:22"
+  nessus:
+    image: sneakynessus
+    container_name: nessus
+    restart: always
+    build:
+      context: ./nessus
+    ports:
+      - "8843:8843"
+    

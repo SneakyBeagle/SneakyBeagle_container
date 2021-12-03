@@ -1,11 +1,18 @@
 # SneakyBeagle container
-Simple container image build to run a kali that allows SSH and Nessus to be connected to. Exposes these ports externally on the host machine. The build currently results in a 5.6GB image, so not exactly lightweight. Still mean to clean this up a bit.
+Simple docker compose file and Dockerfiles to build a kali container and a Nessus container. Made to simplify deployments during pentests and vulnerability scans.
 
-# Run container:
+# Create containers:
 ```
 ./run.sh
 ```
-This will prompt you for a password to use for the root user of the container. It will only ask it once, so make sure you get it right, or be prepared to rebuild the container.
+This will run docker-compose and build two images and containers. One Kali with some tooling and configuration modifications and one Nessus.
+Once executed, you will be prompterd for a password to use for the root user of the container. It will only ask it once, so make sure you get it right, or be prepared to rebuild the container(s).
+```
+Starting...
+Enter a password to use for the container:
+```
+Once done, you will be able to login to the kali container via SSH and to the nessus server via HTTPS.
+
 
 # Installed tools
 
