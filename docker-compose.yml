@@ -6,6 +6,8 @@ services:
     restart: always
     build:
       context: ./kali
+      args:
+        SSHPASSWORD: ${SSHPASSWORD}
     ports:
       - "2222:22"
   nessus:

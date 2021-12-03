@@ -1,8 +1,7 @@
 FROM kalilinux/kali-bleeding-edge:latest
-ARG password
+ARG SSHPASSWORD
 
 # main setup and installation
-RUN password=$password
 RUN apt-get update
 RUN apt-get install -y curl netcat-traditional nmap gobuster python3 python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois nikto wget ssh net-tools git nfs-common tcpdump
 
@@ -21,7 +20,7 @@ RUN mkdir /usr/share/wordlists
 RUN curl https://getcroc.schollz.com | bash
 
 # setup for ssh (change password ASAP)
-RUN echo "root:$password" | chpasswd
+RUN echo "root:$SSHPASSWORD" | chpasswd
 RUN service ssh start
 EXPOSE 22
 

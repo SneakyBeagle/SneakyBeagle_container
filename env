@@ -1,3 +1,4 @@
 ACTIVATION_CODE=<activation_code>
 USERNAME=<username>
 PASSWORD=<password>
+SSHPASSWORD=<ssh_password>

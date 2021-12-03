@@ -2,17 +2,39 @@
 Simple docker compose file and Dockerfiles to build a kali container and a Nessus container. Made to simplify deployments during pentests and vulnerability scans.
 
 # Create containers:
+## Step 1:
+Copy "env" to ".env" and enter the Nessus activation code, a username and a password into it, and lastly a password to ssh into the kali machine. As in the following example:
 ```
-./run.sh
+ACTIVATION_CODE=<activation_code>
+USERNAME=<username>
+PASSWORD=<password>
+SSHPASSWORD=<ssh_password>
 ```
-This will run docker-compose and build two images and containers. One Kali with some tooling and configuration modifications and one Nessus.
-Once executed, you will be prompterd for a password to use for the root user of the container. It will only ask it once, so make sure you get it right, or be prepared to rebuild the container(s).
-```
-Starting...
-Enter a password to use for the container:
-```
-Once done, you will be able to login to the kali container via SSH and to the nessus server via HTTPS.
 
+## Step 2:
+```
+docker-compose build [service]
+```
+This will parse the docker-compose.yml file and start building the images accordingly. You can either build all services by running:
+```
+docker-compose build
+```
+Or build a specific service, like for example only Nessus, by running
+```
+docker-compose build nessus
+```
+
+## Step 3:
+Depending on what service(s) you want to run, the following commands can be used:
+```
+docker-compose up -d
+```
+```
+docker-compose up -d nessus
+```
+```
+docker-compose up -d kali
+```
 
 # Installed tools
 
