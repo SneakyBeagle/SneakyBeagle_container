@@ -1,53 +1,50 @@
-# Build container:
-```
-docker build -t attackdocker .
-```
+# SneakyBeagle container
+Simple container image build to run a kali that allows SSH and Nessus to be connected to. Exposes these ports externally on the host machine. The build currently results in a 5.6GB image, so not exactly lightweight. Still mean to clean this up a bit.
 
-# Run container with SSH:
+# Run container:
 ```
-docker run -p 2222:22 --name attackct -it attackdocker
+./run.sh
 ```
-This will run the containers SSH and bind it to the hosts port 2222.
-
-# Credentials
-```
-root:attack
-```
-Make sure to change this and look over the sshd_config to make sure
-it fits your needs and is secure enough for your needs.
+This will prompt you for a password to use for the root user of the container. It will only ask it once, so make sure you get it right, or be prepared to rebuild the container.
 
 # Installed tools
 
-## Through apt:
 - curl
 - netcat-traditional
 - nmap
 - gobuster
 - python3
 - python3-pip
-- seclists (placed in /usr/share)
+- seclists
 - iproute2
-- dnsutils (used for dig)
-- iputils-ping (ping)
+- dnsutils
+- iputils-ping
 - testssl.sh
-- emacs-nox (emacs without GUI)
+- emacs-nox
 - sqlmap
 - whois
 - nikto
 - wget
 - ssh
-- exploitdb
-- man-db
 - net-tools
 - zsh
 - git
 - hydra
-- w3m
 - commix
 - vim
 - golang-go
-- mydumper (MySQL backup tool. Nice for DB dumps)
-
-## Through git:
-- croc (easily share files with any other computer through a secure relay)
+- mydumper
+- nfs-common
+- tcpdump
+- croc
+- ohmyzsh
 - PayloadAllTheThings
+- Nessus
+
+
+## Optional
+- man-db
+- w3m
+- exploitdb
+- smbclient
+- dsniff

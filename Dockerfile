@@ -1,4 +1,5 @@
 FROM kalilinux/kali-bleeding-edge:latest
+ARG password
 
 # main setup and installation
 RUN apt-get update
@@ -32,7 +33,7 @@ RUN rm /root/Nessus.deb
 EXPOSE 8834
 
 # setup for ssh (change password ASAP)
-RUN echo "root:attack" | chpasswd
+RUN echo "root:$password" | chpasswd
 EXPOSE 22
 
 # upgrade packages
