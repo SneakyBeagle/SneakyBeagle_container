@@ -1,4 +1,9 @@
+# Nessus
 ACTIVATION_CODE=<activation_code>
 USERNAME=<username>
 PASSWORD=<password>
+NESSUSHOSTPORT=8843
+
+# SSH
 SSHPASSWORD=<ssh_password>
+SSHHOSTPORT=2222

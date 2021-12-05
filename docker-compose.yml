@@ -9,13 +9,17 @@ services:
       args:
         SSHPASSWORD: ${SSHPASSWORD}
     ports:
-      - "2222:22"
+      - "${SSHHOSTPORT}:22"
   nessus:
     image: sneakynessus
     container_name: nessus
+    network_mode: "bridge"
     restart: always
     build:
       context: ./nessus
+      args:
+        ACTIVATION_CODE: ${ACTIVATION_CODE}
+        USERNAME: ${USERNAME}
+        PASSWORD: ${PASSWORD}
     ports:
-      - "8843:8843"
-    
+      - "${NESSUSHOSTPORT}:8843"

@@ -5,11 +5,18 @@ Simple docker compose file and Dockerfiles to build a kali container and a Nessu
 ## Step 1:
 Copy "env" to ".env" and enter the Nessus activation code, a username and a password into it, and lastly a password to ssh into the kali machine. As in the following example:
 ```
+# Nessus
 ACTIVATION_CODE=<activation_code>
 USERNAME=<username>
 PASSWORD=<password>
+NESSUSHOSTPORT=8843
+
+# SSH
 SSHPASSWORD=<ssh_password>
+SSHHOSTPORT=2222
 ```
+
+Optionally, you can also configure the ports that the hosting machine will expose for the services.
 
 ## Step 2:
 ```
