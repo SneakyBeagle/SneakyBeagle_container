@@ -68,6 +68,7 @@ docker-compose up -d kali
 - git
 - nfs-common
 - tcpdump
+- seclists
 
 ## Optional
 - man-db
@@ -75,3 +76,10 @@ docker-compose up -d kali
 - exploitdb
 - smbclient
 - dsniff
+- testssl.sh
+- commix
+- hydra
+- vim
+- golang-go
+- mydumper
+- PayloadAllTheThings
