@@ -12,14 +12,17 @@ services:
       - "${SSHHOSTPORT}:22"
   nessus:
     image: sneakynessus
+    #image: tenableofficial/nessus
     container_name: nessus
-    network_mode: "bridge"
-    restart: always
     build:
       context: ./nessus
       args:
         ACTIVATION_CODE: ${ACTIVATION_CODE}
         USERNAME: ${USERNAME}
         PASSWORD: ${PASSWORD}
+    restart: always
+    env_file:
+      - .env
     ports:
-      - "${NESSUSHOSTPORT}:8843"
+      - "${NESSUSHOSTPORT}:8834"
+      

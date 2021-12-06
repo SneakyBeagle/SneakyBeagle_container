@@ -1,21 +1,24 @@
 # SneakyBeagle container
-Simple docker compose file and Dockerfiles to build a kali container and a Nessus container. Made to simplify deployments during pentests and vulnerability scans.
+Simple docker compose file and Dockerfiles to build a kali container and a Nessus container. Made to simplify deployments during pentests and vulnerability scans. Exposes port 2222 and port 8834 on the hosting machine. Port 2222 is used to SSH into the kali container and port 8834 is used to expose Nessus. Settings can be changed in the environment file, see [Step 1](#step-1).
 
 # Create containers:
 ## Step 1:
-Copy "env" to ".env" and enter the Nessus activation code, a username and a password into it, and lastly a password to ssh into the kali machine. As in the following example:
+Copy "env" to ".env".
+```
+cp env .env
+```
+Enter (in .env) the Nessus activation code, a username and a password, and lastly a password to ssh into the kali machine. As in the following example:
 ```
 # Nessus
-ACTIVATION_CODE=<activation_code>
-USERNAME=<username>
-PASSWORD=<password>
-NESSUSHOSTPORT=8843
+ACTIVATION_CODE=AAAA-BBBB-CCCC-DDDD
+USERNAME=admin
+PASSWORD=awesomepassword
+NESSUSHOSTPORT=8834
 
 # SSH
-SSHPASSWORD=<ssh_password>
+SSHPASSWORD=anotherawesomepassword
 SSHHOSTPORT=2222
 ```
-
 Optionally, you can also configure the ports that the hosting machine will expose for the services.
 
 ## Step 2:
@@ -45,17 +48,16 @@ docker-compose up -d kali
 
 # Installed tools
 
+## Kali
 - curl
 - netcat-traditional
 - nmap
 - gobuster
 - python3
 - python3-pip
-- seclists
 - iproute2
 - dnsutils
 - iputils-ping
-- testssl.sh
 - emacs-nox
 - sqlmap
 - whois
@@ -63,20 +65,9 @@ docker-compose up -d kali
 - wget
 - ssh
 - net-tools
-- zsh
 - git
-- hydra
-- commix
-- vim
-- golang-go
-- mydumper
 - nfs-common
 - tcpdump
-- croc
-- ohmyzsh
-- PayloadAllTheThings
-- Nessus
-
 
 ## Optional
 - man-db
