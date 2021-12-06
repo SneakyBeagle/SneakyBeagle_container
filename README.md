@@ -55,6 +55,18 @@ docker-compose up -d nessus
 docker-compose up -d kali
 ```
 
+# Stop containers
+To stop the containers, run:
+```
+docker-compose stop
+```
+
+# Remove containers
+To remove the containers, once stopped, run:
+```
+docker-compose rm
+```
+
 # Installed tools
 
 ## Kali
