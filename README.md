@@ -103,4 +103,4 @@ docker-compose rm
 - vim
 - golang-go
 - mydumper
-- PayloadAllTheThings
+- PayloadsAllTheThings
