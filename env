@@ -2,7 +2,7 @@
 ACTIVATION_CODE=<activation_code>
 USERNAME=<username>
 PASSWORD=<password>
-NESSUSHOSTPORT=8843
+NESSUSHOSTPORT=8834
 
 # SSH
 SSHPASSWORD=<ssh_password>
