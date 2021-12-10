@@ -1,6 +1,6 @@
 # SneakyBeagle container
 
-Simple docker compose file and Dockerfiles to build a kali container, a Nessus container, a container with a complete toolkit for Red Team operations, and a container with Infection Monkey for continuous pentesting, and attack simulations. Made to simplify deployments during pentests and vulnerability scans. Exposes port 2222 and port 8834 on the hosting machine. Port 2222 is used to SSH into the kali container and port 8834 is used to expose Nessus. Infection Monkey exposes port 5000. Settings can be changed in the environment file, see [Step 1](#step-1).
+Simple docker compose file and Dockerfiles to build a kali container, a Nessus container, a container with a complete toolkit for Red Team operations, and a container with Infection Monkey for continuous pentesting, and attack simulations. Made to simplify deployments during pentests and vulnerability scans. Exposes ports 2222,5000 and 8834 on the hosting machine. Port 2222 is used to SSH into the kali container and port 8834 is used to expose Nessus. Infection Monkey exposes port 5000. Settings can be changed in the environment file, see [Step 1](#step-1).
 
 # Create containers:
 
