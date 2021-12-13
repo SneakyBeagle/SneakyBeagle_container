@@ -25,7 +25,7 @@ Optionally, you can also configure the ports that the hosting machine will expos
 A number of optional tools can be installed in the Kali container. This is disabled by default to speed up the build, but can be enabled by uncommenting the following lines in the [Kali Dockerfile](kali/Dockerfile):
 ```
 ## UNCOMMENT TO INSTALL OPTIONAL
-#COPY conf/install_optional.sh /root/install_optional.sh
+#COPY files/install_optional.sh /root/install_optional.sh
 #RUN chmod +x /root/install_optional.sh && /root/install_optional.sh && rm /root/install_optional.sh
 ```
 The default tools can be found [here](#kali) and the optional tools can be found [here](#optional)
