@@ -1,5 +1,5 @@
 FROM debian:latest AS base
 LABEL author="cbk914"
-LABEL description="Infection Monkey for Continuous Pentesting"
+LABEL description="Container for Red Team Campaign"
 
 EXPOSE 5000
