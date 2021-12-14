@@ -102,6 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 alias ls='ls -lah'
+alias myip='curl https://ifconfig.me;echo'
 
 function mkredteam(){
         mkdir {attackvectors,burp,recon,osint,nmap,exploits,infra,wireless,phishing,reports,targets,vulns,zap}
