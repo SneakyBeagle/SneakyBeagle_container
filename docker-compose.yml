@@ -25,15 +25,3 @@ services:
       - .env
     ports:
       - "${NESSUSHOSTPORT}:8834"
-    infectionmonkey:
-      image: sneakyinfectionmonkey
-      container_name: sneakymonkey
-      build:
-        context: ./infectionmonkey
-      ports:
-        - "${MONKEYHOSTPORT}:5000"
-    redteam:
-      image: sneakyredteam
-      container_name: sneakyredteam
-      build:
-        context: ./redteam
