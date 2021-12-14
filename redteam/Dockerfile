@@ -12,4 +12,3 @@ ENV PASSWORD=${PASSWORD}
 RUN yum -y update && yum -y upgrade
 
 EXPOSE 8834
-#CMD ["/usr/bin/supervisord", "-c", "/etc/supervisord.conf"]
