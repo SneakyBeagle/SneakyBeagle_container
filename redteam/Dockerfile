@@ -1,14 +1,3 @@
-FROM tenableofficial/nessus
-
-ARG ACTIVATION_CODE
-ARG USERNAME
-ARG PASSWORD
-ARG SSHPASSWORD
-
-ENV ACTIVATION_CODE=${ACTIVATION_CODE}
-ENV USERNAME=${USERNAME}
-ENV PASSWORD=${PASSWORD}
-
-RUN yum -y update && yum -y upgrade
-
-EXPOSE 8834
+FROM debian:latest AS base
+LABEL author="cbk914"
+LABEL description="Infection Monkey for Continuous Pentesting"
