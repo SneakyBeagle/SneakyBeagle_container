@@ -100,3 +100,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+alias ls='ls -lah'
+
+function mkredteam(){
+        mkdir {attackvectors,burp,recon,osint,nmap,exploits,infra,wireless,phishing,reports,targets,vulns,zap}
+}
+
