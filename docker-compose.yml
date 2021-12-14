@@ -24,4 +24,4 @@ services:
     env_file:
       - .env
     ports:
-      - "${NESSUSHOSTPORT}:8834"
+      - "${NESSUSHOSTPORT}:8834"     
