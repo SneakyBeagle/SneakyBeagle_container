@@ -12,4 +12,4 @@ git clone $GITHUB/lanmaster53/recon-ng.git
 git clone $GITHUB/xillwillx/skiptracer.git
 git clone $GITHUB/FortyNorthSecurity/Just-Metadata.git
 git clone $GITHUB/smicallef/spiderfoot.git
-
+echo "Done"
