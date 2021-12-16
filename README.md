@@ -130,10 +130,9 @@ docker-compose rm
 - mydumper
 - PayloadsAllTheThings
 
-
 # Red Team
 
-Split into categories, each script installs a defined toolkit for all red team phases.
+Split into categories, each script installs a defined toolkit for all red team phases and attack vectors.
 
 * Anon
 
@@ -152,6 +151,7 @@ Split into categories, each script installs a defined toolkit for all red team p
   * Empire 4
   * Metasploit
   * jok3r
+* Mobile
 * OSINT
 * PostExploitation
 * Privilege Escalation
@@ -175,3 +175,16 @@ Split into categories, each script installs a defined toolkit for all red team p
   * spiderfoot
 * Vulnerability Scan
 * Weaponization
+
+  * CVE-2018-20250.git
+  * CVE-2017-8759.git
+  * CVE-2017-0199.git
+  * CVE-2017-8570.git
+  * demiguise
+  * Malicious Macro Generator
+  * DKMC
+  * Office DDE Payloads
+  * DZGEN
+  * EmbedinHTML
+  * Macro Pack
+* Wireless
