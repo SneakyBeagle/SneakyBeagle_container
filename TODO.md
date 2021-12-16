@@ -1,1 +1,1 @@
-* RedTeam container orchestration with docker-compose
+* Replace RedTeam scripts with container orchestration with docker-compose
