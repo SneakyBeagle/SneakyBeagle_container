@@ -4,5 +4,5 @@ LABEL description="Container for Red Team Campaign"
 ENV WORKDIR_ENV=/redteam
 WORKDIR ${WORKDIR_ENV}
 SHELL ["/bin/bash", " -c"]
-RUN apt-get update && apt-get upgrade -y && apt-get install -y python3 python3-dev redis-server terminator curl vim unzip
+RUN apt-get update && apt-get upgrade -y && apt-get install -y python3 python3-dev python3-pip redis-server terminator curl vim unzip libssl-dev 
 
