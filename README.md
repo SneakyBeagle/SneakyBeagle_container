@@ -136,9 +136,12 @@ Split into categories, each script installs a defined toolkit for all red team p
 
 * Anon
 
-  * Tor
+  * TOR
   * TORsocks
+  * I2P
   * ProxyChains
+  * OpenVPN
+  * Wireguard
 * Data Analysis
 * Exfiltration
 
