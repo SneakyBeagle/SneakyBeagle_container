@@ -13,4 +13,5 @@ git clone $GITHUB/diego-treitos/linux-smart-enumeration.git
 git clone $GITHUB/411Hall/JAWS.git
 git clone $GITHUB/bitsadmin/wesng.git
 git clone $GITHUB/absolomb/WindowsEnum.git
+git clone $GITHUB/cckuailong/Log4j_CVE-2021-45046.git
 echo "Done"
