@@ -151,6 +151,8 @@ Split into categories, each script installs a defined toolkit for all red team p
   * Empire 4
   * Metasploit
   * jok3r
+  * CVE-2021-44228 PoC log4j bypass words
+  * Log4Shell RCE Exploit
 * Mobile
 * OSINT
 * PostExploitation
@@ -164,6 +166,7 @@ Split into categories, each script installs a defined toolkit for all red team p
   * JAWS
   * Windows Exploit Suggester NG
   * WindowsEnum
+  * Log4j CVE-2021-45046
 * Recon
 
   * nmap
@@ -174,6 +177,8 @@ Split into categories, each script installs a defined toolkit for all red team p
   * Just-Metadata
   * spiderfoot
 * Vulnerability Scan
+
+  * CVE-2021-44228 Scanner
 * Weaponization
 
   * CVE-2018-20250.git
