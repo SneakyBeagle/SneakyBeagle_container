@@ -9,5 +9,11 @@ cd $WORKDIR
 git clone $GITHUB/SecureAuthCorp/impacket.git
 #git clone $GITHUB/CVE-2021-44228-Scanner.git
 git clone $GITHUB/darkarnium/Log4j-CVE-Detect.git
-
+git clone $GITHUB/projectdiscovery/nuclei.git
+cd $GITHUB/projectdiscovery && \ 
+    cd nuclei/v2/cmd/nuclei; \
+    go build; \
+    mv nuclei /usr/local/bin/; \
+    nuclei -version;
+    nuclei -ut;
 echo "Done"

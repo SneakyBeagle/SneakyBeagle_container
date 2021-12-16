@@ -12,7 +12,11 @@ Copy "env" to ".env".
 cp env .env
 ```
 
-Enter (in .env) the Nessus activation code, a username and a password, and lastly a password to ssh into the kali machine. As in the following example:
+Enter (in .env) the Nessus activation code, a username and a password, and a password to ssh into the kali machine.
+
+You can also change the default port for Infection Monkey.
+
+As in the following example:
 
 ```
 # Nessus
@@ -24,6 +28,9 @@ NESSUSHOSTPORT=8834
 # SSH
 SSHPASSWORD=anotherawesomepassword
 SSHHOSTPORT=2222
+
+# Infection Monkey
+MONKEYHOSTPORT=5000
 ```
 
 Optionally, you can also configure the ports that the hosting machine will expose for the services.
