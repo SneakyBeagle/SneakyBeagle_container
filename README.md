@@ -1,6 +1,8 @@
 # SneakyBeagle container
 
-Simple docker compose file and Dockerfiles to build a kali container, a Nessus container, a container with a complete toolkit for Red Team operations, and a container with Infection Monkey for continuous pentesting, and attack simulations. Made to simplify deployments during pentests and vulnerability scans. Exposes ports 2222,5000 and 8834 on the hosting machine. Port 2222 is used to SSH into the kali container and port 8834 is used to expose Nessus. Infection Monkey exposes port 5000. Settings can be changed in the environment file, see [Step 1](#step-1).
+Simple docker compose file and Dockerfiles to build a kali container, a Nessus container, a container with a complete toolkit for Red Team operations, and a container with Infection Monkey for continuous pentesting, and attack simulations. Made to simplify deployments during pentests, vulnerability scans and Red Team Campaigns.
+
+Exposes ports 2222,5000 and 8834 on the hosting machine. Port 2222 is used to SSH into the kali container and port 8834 is used to expose Nessus. Infection Monkey exposes port 5000. Settings can be changed in the environment file, see [Step 1](#step-1).
 
 # Create containers:
 
@@ -164,8 +166,25 @@ Split into categories, each script installs a defined toolkit for all red team p
   * jok3r Framework
   * CVE-2021-44228 PoC log4j bypass words
   * Log4Shell RCE Exploit
+  * AD Enum
 * Mobile
-* OSINT
+
+  * Mobile Security Framework
+* OSINT / Recon
+
+  * TIDoS Framework
+  * terra
+  * Phoneinfoga
+  * Buster
+  * pwnedOrNot
+  * nmap
+  * theHarvester
+  * metagoofil
+  * recon-ng
+  * skiptracer
+  * Just-Metadata
+  * spiderfoot
+  * FinalRecon
 * Phishing
 * PostExploitation
 * Privilege Escalation
@@ -179,24 +198,17 @@ Split into categories, each script installs a defined toolkit for all red team p
   * Windows Exploit Suggester NG
   * WindowsEnum
   * Log4j CVE-2021-45046
-* Recon
-
-  * nmap
-  * theHarvester
-  * metagoofil
-  * recon-ng
-  * skiptracer
-  * Just-Metadata
-  * spiderfoot
 * Vulnerability Scan
 
   * CVE-2021-44228 Scanner
+  * Log4J CVE Detect
+  * Nuclei
 * Weaponization
 
-  * CVE-2018-20250.git
-  * CVE-2017-8759.git
-  * CVE-2017-0199.git
-  * CVE-2017-8570.git
+  * CVE-2018-20250
+  * CVE-2017-8759
+  * CVE-2017-0199
+  * CVE-2017-8570
   * demiguise
   * Malicious Macro Generator
   * DKMC
@@ -204,4 +216,5 @@ Split into categories, each script installs a defined toolkit for all red team p
   * DZGEN
   * EmbedinHTML
   * Macro Pack
+  * DInjector
 * Wireless
