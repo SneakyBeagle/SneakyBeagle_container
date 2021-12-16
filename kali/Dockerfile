@@ -1,10 +1,10 @@
 FROM kalilinux/kali-bleeding-edge:latest 
 label author="SneakyBeable"
-label description="Kali Linux"
+label description="Container for Kali Linux"
 ARG SSHPASSWORD
 
 # main setup and installation
-RUN apt-get update  && apt-get install -y curl netcat-traditional nmap gobuster python3 python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois nikto wget ssh net-tools git nfs-common tcpdump seclists
+RUN apt-get update && apt-get install -y curl netcat-traditional nmap gobuster python3 python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois nikto wget ssh net-tools git nfs-common tcpdump seclists
 
 # Configuration files
 COPY conf/.vimrc /root/.vimrc
