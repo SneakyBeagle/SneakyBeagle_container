@@ -128,7 +128,7 @@ fi
 alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
-alias ls='lah'
+alias ls='ls -lah'
 alias myip='curl https://ifconfig.me;echo'
 
 # Alias definitions.
