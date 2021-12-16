@@ -129,6 +129,7 @@ docker-compose rm
 - golang-go
 - mydumper
 - PayloadsAllTheThings
+- kali-whoami
 
 # Red Team
 
@@ -151,13 +152,14 @@ Split into categories, each script installs a defined toolkit for all red team p
   * impacket
   * BEEF
   * bettercap
-  * Empire 4
-  * Metasploit
-  * jok3r
+  * Empire Framework 4
+  * Metasploit Framework
+  * jok3r Framework
   * CVE-2021-44228 PoC log4j bypass words
   * Log4Shell RCE Exploit
 * Mobile
 * OSINT
+* Phishing
 * PostExploitation
 * Privilege Escalation
 
