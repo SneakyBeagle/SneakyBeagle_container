@@ -66,11 +66,9 @@ Depending on what service(s) you want to run, the following commands can be used
 docker-compose up -d
 ```
 
-
 ```
 docker-compose up -d nessus
 ```
-
 
 ```
 docker-compose up -d kali
@@ -131,3 +129,49 @@ docker-compose rm
 - golang-go
 - mydumper
 - PayloadsAllTheThings
+
+
+# Red Team
+
+Split into categories, each script installs a defined toolkit for all red team phases.
+
+* Anon
+
+  * Tor
+  * TORsocks
+  * ProxyChains
+* Data Analysis
+* Exfiltration
+
+  * Mistica
+* Exploitation
+
+  * impacket
+  * BEEF
+  * bettercap
+  * Empire 4
+  * Metasploit
+  * jok3r
+* OSINT
+* PostExploitation
+* Privilege Escalation
+
+  * BeRoot
+  * LinEnum
+  * Linux Exploit Suggester
+  * linuxprivchecker
+  * Linux Smart Enumeration
+  * JAWS
+  * Windows Exploit Suggester NG
+  * WindowsEnum
+* Recon
+
+  * nmap
+  * theHarvester
+  * metagoofil
+  * recon-ng
+  * skiptracer
+  * Just-Metadata
+  * spiderfoot
+* Vulnerability Scan
+* Weaponization
