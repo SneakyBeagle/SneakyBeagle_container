@@ -1,4 +1,6 @@
-FROM kalilinux/kali-bleeding-edge:latest
+FROM kalilinux/kali-bleeding-edge:latest 
+label author="SneakyBeable"
+label description="Kali Linux"
 ARG SSHPASSWORD
 
 # main setup and installation
