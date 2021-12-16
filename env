@@ -8,5 +8,10 @@ NESSUSHOSTPORT=8834
 SSHPASSWORD=<ssh_password>
 SSHHOSTPORT=2222
 
+# RedTeam
+#ENV WORKDIR_ENV=/redteam
+#WORKDIR ${WORKDIR_ENV}
+#SHELL ["/bin/bash", " -c"]
+
 # Infection Monkey
 MONKEYHOSTPORT=5000
