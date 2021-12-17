@@ -15,4 +15,5 @@ git clone $GITHUB/bitsadmin/wesng.git
 git clone $GITHUB/absolomb/WindowsEnum.git
 git clone $GITHUB/cckuailong/Log4j_CVE-2021-45046.git
 git clone $GITHUB/lgandx/Responder.git
+git clone $GITHUB/SecWiki/windows-kernel-exploits.git
 echo "Done"
