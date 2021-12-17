@@ -1,7 +1,9 @@
 #!/bin/bash
 
-WORKDIR="/root/"
+WORKDIR="/root/RedTeamToolkit/phishing"
 GITHUB="https://github.com"
+
+mkdir $WORKDIR
 
 echo "Installing phishing tools"
 cd $WORKDIR

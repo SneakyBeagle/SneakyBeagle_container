@@ -1,7 +1,9 @@
 #!/bin/bash
 
-WORKDIR="/root/"
+WORKDIR="/root/RedTeamToolkit/weapons"
 GITHUB="https://github.com"
+
+mkdir $WORKDIR
 
 echo "Installing weapon factory"
 cd $WORKDIR

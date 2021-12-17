@@ -1,7 +1,9 @@
 #!/bin/bash
 
-WORKDIR="/root/"
+WORKDIR="/root/RedTeamToolkit/evasion"
 GITHUB="https://github.com"
+
+mkdir $WORKDIR
 
 echo "Installing evasion tools"
 cd $WORKDIR

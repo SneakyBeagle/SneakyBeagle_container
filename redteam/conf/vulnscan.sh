@@ -1,7 +1,9 @@
 #!/bin/bash
 
-WORKDIR="/root/"
+WORKDIR="/root/RedTeamToolkit/vulnscan"
 GITHUB="https://github.com"
+
+mkdir $WORKDIR
 
 echo "Installing vulnerability scan tools"
 apt update && apt install -y libsasl2-dev libldap2-dev
