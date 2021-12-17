@@ -24,4 +24,9 @@ services:
     env_file:
       - .env
     ports:
-      - "${NESSUSHOSTPORT}:8834"     
+      - "${NESSUSHOSTPORT}:8834"
+  redteam:
+    image: sneakyredteam
+    container_name: redteam
+    build:
+      context: ./redteam
