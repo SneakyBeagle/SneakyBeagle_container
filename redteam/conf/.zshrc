@@ -105,6 +105,6 @@ alias ls='ls -lah'
 alias myip='curl https://ifconfig.me;echo'
 
 function mkrt(){
-        mkdir {attackvectors,burp,recon,osint,nmap,exploits,infra,wireless,phishing,reports,targets,vulns,zap}
+        mkdir {burp,osint,mobile,nmap,exploits,infra,wireless,phishing,reports,targets,vulns,zap}
 }
 
