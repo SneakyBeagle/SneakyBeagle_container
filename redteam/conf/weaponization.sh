@@ -27,4 +27,5 @@ git clone $GITHUB/FSecureLABS/wePWNise.git
 git clone $GITHUB/r00t-3xp10it/trojanizer.git
 git clone $GITHUB/khr0x40sh/MacroShop.git
 git clone $GITHUB/outflanknl/EvilClippy.git
+git clone $GITHUB/TheWover/donut.git
 echo "Done"
