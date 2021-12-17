@@ -5,6 +5,7 @@ GITHUB="https://github.com"
 
 echo "Installing phishing tools"
 cd $WORKDIR
+git clone $GITHUB/trustedsec/social-engineer-toolkit.git
 git clone $GITHUB/L4bF0x/PhishingPretexts.git
 git clone $GITHUB/ryhanson/phishery.git
 git clone $GITHUB/htr-tech/zphisher.git

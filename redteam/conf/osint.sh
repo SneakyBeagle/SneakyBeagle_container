@@ -24,4 +24,7 @@ git clone $GITHUB/21y4d/nmapAutomator.git
 git clone $GITHUB/Datalux/Osintgram.git
 git clone $GITHUB/Greenwolf/social_mapper.git
 git clone $GITHUB/m8r0wn/CrossLinked.git
+git clone $GITHUB/sense-of-security/ADRecon
+git clone $GITHUB/maldevel/EmailHarvester.git
+git clone $GITHUB/vaguileradiaz/tinfoleak.git
 echo "Done"

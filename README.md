@@ -157,6 +157,11 @@ Split into categories, each script installs a defined toolkit for all red team p
 * Exfiltration
 
   * Mistica
+  * DNSExfiltration
+  * Egress-assess
+  * Data Exfiltration Toolkit
+  * Powershell-RAT
+  * PyExfil
 * Exploitation
 
   * impacket
@@ -191,8 +196,12 @@ Split into categories, each script installs a defined toolkit for all red team p
   * OsintGram
   * Social Mapper
   * CrossLinked
+  * ADRecon
+  * Email Harvester
+  * tinfoleak
 * Phishing
 
+  * Social Engineer Toolkit
   * Phishing Pretexts
   * Phishery
   * ZPhisher
@@ -204,6 +213,11 @@ Split into categories, each script installs a defined toolkit for all red team p
   * ReelPhish
   * CredSniper
 * PostExploitation
+
+  * Pupy
+  * gcat
+  * Merlin
+  * weevely
 * Privilege Escalation
 
   * BeRoot
@@ -216,10 +230,15 @@ Split into categories, each script installs a defined toolkit for all red team p
   * WindowsEnum
   * Log4j CVE-2021-45046
   * Responder
+  * Windows Kernel Exploits
 * Vulnerability Scan
 
   * CVE-2021-44228 Scanner
   * Log4J CVE Detect
+  * espoofer
+  * Domain Security Scanner
+  * dkimsc4n
+  * testssl.sh
   * Nuclei
   * Sn1per
 * Weaponization
@@ -245,4 +264,6 @@ Split into categories, each script installs a defined toolkit for all red team p
   * Macro Shop
   * EvilClippy
   * donut
+  * Icebreaker
+  * Evilgrade
 * Wireless
