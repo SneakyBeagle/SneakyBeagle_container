@@ -185,6 +185,9 @@ Split into categories, each script installs a defined toolkit for all red team p
   * Just-Metadata
   * spiderfoot
   * FinalRecon
+  * nmap Automator
+  * OsintGram
+  * Social Mapper
 * Phishing
 * PostExploitation
 * Privilege Escalation
@@ -203,6 +206,7 @@ Split into categories, each script installs a defined toolkit for all red team p
   * CVE-2021-44228 Scanner
   * Log4J CVE Detect
   * Nuclei
+  * Sn1per
 * Weaponization
 
   * CVE-2018-20250
@@ -217,4 +221,5 @@ Split into categories, each script installs a defined toolkit for all red team p
   * EmbedinHTML
   * Macro Pack
   * DInjector
+  * Unicorn
 * Wireless

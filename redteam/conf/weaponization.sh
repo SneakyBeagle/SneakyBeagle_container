@@ -19,4 +19,5 @@ git clone $GITHUB/joker25000/DZGEN.git
 git clone $GITHUB/Arno0x/EmbedInHTML.git
 git clone $GITHUB/sevagas/macro_pack.git
 git clone $GITHUB/snovvcrash/DInjector.git
+git clone $GITHUB/trustedsec/unicorn
 echo "Done"

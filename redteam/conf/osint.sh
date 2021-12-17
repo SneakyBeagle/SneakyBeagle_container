@@ -8,6 +8,7 @@ apt update && apt install -y libncurses5 libxml2 nmap tcpdump libexiv2-dev libma
 cd $WORKDIR
 git clone $GITHUB/0xinfection/tidos-framework.git
 git clone $GITHUB/xadhrit/terra.git
+git clone $GITHUB/twintproject/twint.git
 git clone $GITHUB/sundowndev/phoneinfoga.git
 git clone $GITHUB/sham00n/buster.git
 git clone $GITHUB/thewhiteh4t/pwnedOrNot.git
@@ -19,4 +20,7 @@ git clone $GITHUB/xillwillx/skiptracer.git
 git clone $GITHUB/FortyNorthSecurity/Just-Metadata.git
 git clone $GITHUB/smicallef/spiderfoot.git
 git clone $GITHUB/thewhiteh4t/FinalRecon.git
+git clone $GITHUB/21y4d/nmapAutomator.git
+git clone $GITHUB/Datalux/Osintgram.git
+gitc clone $GITHUB/Greenwolf/social_mapper.git
 echo "Done"
