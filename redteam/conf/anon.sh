@@ -13,6 +13,6 @@ curl -o i2p-archive-keyring.gpg https://geti2p.net/_static/i2p-archive-keyring.g
 cp ~/i2p-archive-keyring.gpg /usr/share/keyrings
 apt install -y i2p i2p-keyring
 #apt-get install shadowsocks-libev 
-#cd $WORKDIR
-#git clone $GITHUB/
+cd $WORKDIR
+git clone $GITHUB/githacktools/TorGhostNG.git
 echo "Done"
