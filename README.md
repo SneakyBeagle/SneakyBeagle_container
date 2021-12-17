@@ -192,6 +192,17 @@ Split into categories, each script installs a defined toolkit for all red team p
   * Social Mapper
   * CrossLinked
 * Phishing
+
+  * Phishing Pretexts
+  * Phishery
+  * ZPhisher
+  * King Phiser
+  * Evilginx2
+  * evil-ssdp
+  * FiercePhish
+  * GoPhish
+  * ReelPhish
+  * CredSniper
 * PostExploitation
 * Privilege Escalation
 
@@ -233,4 +244,5 @@ Split into categories, each script installs a defined toolkit for all red team p
   * trojanizer
   * Macro Shop
   * EvilClippy
+  * donut
 * Wireless
