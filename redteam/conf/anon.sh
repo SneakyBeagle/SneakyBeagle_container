@@ -8,7 +8,7 @@ mkdir $WORKDIR
 echo "Installing anonymity tools"
 apt-add-repository ppa:i2p-maintainers/i2p
 apt-get update
-apt-get install -y openvpn torsocks proxychains wireguard apt-transport-https lsb-release
+apt-get install -y openvpn torsocks proxychains wireguard
 echo "deb [signed-by=/usr/share/keyrings/i2p-archive-keyring.gpg] https://deb.i2p2.de/ $(lsb_release -sc) main" \
   | sudo tee /etc/apt/sources.list.d/i2p.list
 curl -o i2p-archive-keyring.gpg https://geti2p.net/_static/i2p-archive-keyring.gpg
