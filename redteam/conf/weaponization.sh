@@ -20,4 +20,11 @@ git clone $GITHUB/Arno0x/EmbedInHTML.git
 git clone $GITHUB/sevagas/macro_pack.git
 git clone $GITHUB/snovvcrash/DInjector.git
 git clone $GITHUB/trustedsec/unicorn
+git clone $GITHUB/secretsquirrel/the-backdoor-factory.git
+git clone $GITHUB/enigma0x3/Generate-Macro.git
+git clone $GITHUB/infosecn1nja/MaliciousMacroMSBuild.git
+git clone $GITHUB/FSecureLABS/wePWNise.git
+git clone $GITHUB/r00t-3xp10it/trojanizer.git
+git clone $GITHUB/khr0x40sh/MacroShop.git
+git clone $GITHUB/outflanknl/EvilClippy.git
 echo "Done"

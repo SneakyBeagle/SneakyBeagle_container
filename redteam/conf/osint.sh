@@ -22,5 +22,6 @@ git clone $GITHUB/smicallef/spiderfoot.git
 git clone $GITHUB/thewhiteh4t/FinalRecon.git
 git clone $GITHUB/21y4d/nmapAutomator.git
 git clone $GITHUB/Datalux/Osintgram.git
-gitc clone $GITHUB/Greenwolf/social_mapper.git
+git clone $GITHUB/Greenwolf/social_mapper.git
+git clone $GITHUB/m8r0wn/CrossLinked.git
 echo "Done"

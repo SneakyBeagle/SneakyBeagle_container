@@ -152,6 +152,7 @@ Split into categories, each script installs a defined toolkit for all red team p
   * ProxyChains
   * OpenVPN
   * Wireguard
+  * TorGhost NG
 * Data Analysis
 * Exfiltration
 
@@ -162,6 +163,7 @@ Split into categories, each script installs a defined toolkit for all red team p
   * BEEF
   * bettercap
   * Empire Framework 4
+  * StarFighters
   * Metasploit Framework
   * jok3r Framework
   * CVE-2021-44228 PoC log4j bypass words
@@ -188,6 +190,7 @@ Split into categories, each script installs a defined toolkit for all red team p
   * nmap Automator
   * OsintGram
   * Social Mapper
+  * CrossLinked
 * Phishing
 * PostExploitation
 * Privilege Escalation
@@ -201,6 +204,7 @@ Split into categories, each script installs a defined toolkit for all red team p
   * Windows Exploit Suggester NG
   * WindowsEnum
   * Log4j CVE-2021-45046
+  * Responder
 * Vulnerability Scan
 
   * CVE-2021-44228 Scanner
@@ -222,4 +226,11 @@ Split into categories, each script installs a defined toolkit for all red team p
   * Macro Pack
   * DInjector
   * Unicorn
+  * The Backdoor Factory
+  * Generate Macro
+  * MaliciousMacroMSBuild
+  * wePWNise
+  * trojanizer
+  * Macro Shop
+  * EvilClippy
 * Wireless
