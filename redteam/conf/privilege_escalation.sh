@@ -1,7 +1,9 @@
 #!/bin/bash
 
-WORKDIR="/root/"
+WORKDIR="/root/RedTeamToolkit/privesc"
 GITHUB="https://github.com"
+
+mkdir $WORKDIR
 
 echo "Installing privilege escalation tools"
 cd $WORKDIR

@@ -1,7 +1,9 @@
 #!/bin/bash
 
-WORKDIR="/root/"
+WORKDIR="/root/RedTeamToolkit/mobile"
 GITHUB="https://github.com"
+
+mkdir $WORKDIR
 
 echo "Installing mobile tools"
 cd $WORKDIR

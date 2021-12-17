@@ -1,7 +1,9 @@
 #!/bin/bash
 
-WORKDIR="/root/"
+WORKDIR="/root/RedTeamToolkit/anon"
 GITHUB="https://github.com"
+
+mkdir $WORKDIR
 
 echo "Installing anonymity tools"
 apt-add-repository ppa:i2p-maintainers/i2p

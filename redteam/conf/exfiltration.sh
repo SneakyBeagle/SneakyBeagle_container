@@ -1,7 +1,9 @@
 #!/bin/bash
 
-WORKDIR="/root/"
+WORKDIR="/root/RedTeamToolkit/exfiltration"
 GITHUB="https://github.com"
+
+mkdir $WORKDIR
 
 echo "Installing exfiltration tools"
 cd $WORKDIR
