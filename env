@@ -9,6 +9,8 @@ SSHPASSWORD=<ssh_password>
 SSHHOSTPORT=2222
 
 # RedTeam
+RTSSHPASSWORD=<ssh_password>
+RTSSHHOSTPORT=2222
 #ENV WORKDIR_ENV=/redteam
 #WORKDIR ${WORKDIR_ENV}
 #SHELL ["/bin/bash", " -c"]
