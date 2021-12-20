@@ -23,7 +23,4 @@ cd $WORKDIR/projectdiscovery && \
     nuclei -version;
     nuclei -ut;
 cd $WORKDIR
-#git clone https://github.com/1N3/Sn1per
-#cd Sn1per
-#bash install.sh
 echo "Done"
