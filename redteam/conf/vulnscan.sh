@@ -16,7 +16,7 @@ git clone $GITHUB/GlobalCyberAlliance/DomainSecurityScanner.git
 git clone $GITHUB/vavkamil/dkimsc4n.git
 git clone $GITHUB/drwetter/testssl.sh.git
 git clone $GITHUB/projectdiscovery/nuclei.git
-cd $GITHUB/projectdiscovery && \ 
+cd $WORKDIR/projectdiscovery && \ 
     cd nuclei/v2/cmd/nuclei; \
     go build; \
     mv nuclei /usr/local/bin/; \
