@@ -6,7 +6,6 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Configuration files
 COPY conf/.vimrc /root/.vimrc
-COPY conf/.bashrc /root/.bashrc
 COPY conf/sshd_config /etc/ssh/sshd_config
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y apt-utils python3 python3-dev build-essential python3-pip redis-server terminator curl vim unzip libssl-dev \
