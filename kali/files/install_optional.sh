@@ -9,4 +9,6 @@ cd /root/tools/nwrapy/ && ./install.sh
 cd /root/tools && git clone https://github.com/SneakyBeagle/CreepyCrawler.git
 cd /root/tools/CreepyCrawler/ && ./install.sh
 cd /root/tools && git clone https://github.com/trustedsec/egressbuster.git
+go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+nuclei -ut
 echo "Done"
