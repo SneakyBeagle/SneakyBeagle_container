@@ -11,7 +11,7 @@ cd $WORKDIR
 git clone $GITHUB/SecureAuthCorp/impacket.git
 #git clone $GITHUB/CVE-2021-44228-Scanner.git
 git clone $GITHUB/darkarnium/Log4j-CVE-Detect.git
-git clone $GITHUB/chenjj/espooofer.git
+git clone $GITHUB/chenjj/espoofer.git
 git clone $GITHUB/GlobalCyberAlliance/DomainSecurityScanner.git
 git clone $GITHUB/vavkamil/dkimsc4n.git
 git clone $GITHUB/drwetter/testssl.sh.git

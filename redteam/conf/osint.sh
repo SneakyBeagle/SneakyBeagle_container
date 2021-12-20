@@ -6,7 +6,7 @@ GITHUB="https://github.com"
 mkdir $WORKDIR
 
 echo "Installing OSINT/Recon tools"
-apt update && apt install -y libncurses5 libxml2 tcpdump libexiv2-dev libmariadbclient18 libmysqlclient-dev tor
+apt update && apt install -y libncurses5 libxml2 tcpdump libexiv2-dev libmariadb3 libmariadb-dev libmariadb-dev-compat tor
 cd $WORKDIR
 git clone $GITHUB/0xinfection/tidos-framework.git
 git clone $GITHUB/xadhrit/terra.git
