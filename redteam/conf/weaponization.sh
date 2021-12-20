@@ -32,4 +32,5 @@ git clone $GITHUB/outflanknl/EvilClippy.git
 git clone $GITHUB/TheWover/donut.git
 git clone $GITHUB/DanMcInerney/icebreaker.git
 git clone $GITHUB/infobyte/evilgrade.git
+git clone $GITHUB/mindcrypt/powerglot.git
 echo "Done"
