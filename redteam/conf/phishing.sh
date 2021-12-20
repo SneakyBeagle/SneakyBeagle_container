@@ -10,7 +10,7 @@ echo "Installing phishing tools"
 apt install golang-go
 
 cd $WORKDIR
-git clone $GITHUB/trustedsec/social-engineer-toolkit.git
+git clone $GITHUB/trustedsec/social-engineer-toolkit.git && cd social-engineer-toolkit && pip3 install -r requirements.txt && cd $WORKDIR
 git clone $GITHUB/L4bF0x/PhishingPretexts.git
 git clone $GITHUB/ryhanson/phishery.git
 git clone $GITHUB/htr-tech/zphisher.git 
