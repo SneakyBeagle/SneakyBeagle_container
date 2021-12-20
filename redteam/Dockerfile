@@ -17,6 +17,9 @@ mkdir /root/RedTeamToolkit
 COPY conf/*.sh /root/RedTeamToolkit/
 RUN chmod +x /root/RedTeamToolkit/*.sh
 
+# Python env
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
 # setup for ssh (change password ASAP)
 #RUN echo "root:$RTSSHPASSWORD" | chpasswd && service ssh start
 #EXPOSE 22
