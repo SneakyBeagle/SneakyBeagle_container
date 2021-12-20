@@ -152,8 +152,7 @@ Split into categories, each script installs a defined toolkit for all red team p
   * ProxyChains
   * OpenVPN
   * Wireguard
-  * TorGhost NG
-* Data Analysis
+  * TorGhost
 * Exfiltration
 
   * Mistica
@@ -167,8 +166,6 @@ Split into categories, each script installs a defined toolkit for all red team p
   * impacket
   * BEEF
   * bettercap
-  * Empire Framework 4
-  * StarFighters
   * Metasploit Framework
   * jok3r Framework
   * CVE-2021-44228 PoC log4j bypass words
@@ -214,6 +211,8 @@ Split into categories, each script installs a defined toolkit for all red team p
   * CredSniper
 * PostExploitation
 
+  * Empire Framework 4
+  * StarFighters
   * Pupy
   * gcat
   * Merlin
@@ -266,4 +265,3 @@ Split into categories, each script installs a defined toolkit for all red team p
   * donut
   * Icebreaker
   * Evilgrade
-* Wireless

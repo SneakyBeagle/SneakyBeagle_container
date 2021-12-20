@@ -16,5 +16,5 @@ apt-get install -y openvpn torsocks proxychains wireguard
 #apt install -y i2p i2p-keyring
 #apt-get install shadowsocks-libev 
 cd $WORKDIR
-git clone $GITHUB/SusmithKrishnan/torghost.git
+git clone $GITHUB/SusmithKrishnan/torghost.git && cd torghost && pip3 install -r requirements.txt
 echo "Done"
