@@ -30,3 +30,10 @@ services:
     container_name: redteam
     build:
       context: ./redteam
+      args:
+        RTSSHPASSWORD: ${RTSSHPASSWORD}
+    ports:
+      - "${RTSSHHOSTPORT}:22"
+    restart: always
+    env_file:
+      - .env
