@@ -8,6 +8,7 @@ mkdir $WORKDIR
 echo "Installing OSINT/Recon tools"
 apt update && apt install -y libncurses5 libxml2 tcpdump libexiv2-dev libmariadb3 libmariadb-dev libmariadb-dev-compat tor cmake libboost-all-dev
 cd $WORKDIR
+git clone $GITHUB/cbk914/SecLists.git
 git clone $GITHUB/0xinfection/tidos-framework.git && cd tidos-framework && pip3 install -r requirements.txt && cd $WORKDIR
 git clone $GITHUB/xadhrit/terra.git && cd terra && pip3 install -r requirements.txt && cd $WORKDIR
 git clone $GITHUB/twintproject/twint.git && cd twint && pip3 install -r requirements.txt && cd $WORKDIR
