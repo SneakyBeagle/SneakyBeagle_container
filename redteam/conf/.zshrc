@@ -101,8 +101,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls='ls -lah'
-alias myip='curl https://ifconfig.me;echo'
+#alias ls='ls -lah'
+alias myip='curl https://ifconfig.me; echo'
 
 function mkrt(){
         mkdir {burp,osint,mobile,nmap,exploits,infra,wireless,phishing,reports,targets,vulns,zap}
