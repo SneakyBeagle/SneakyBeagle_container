@@ -29,4 +29,5 @@ git clone $GITHUB/m8r0wn/CrossLinked.git && cd CrossLinked && pip3 install -r re
 git clone $GITHUB/sense-of-security/ADRecon
 git clone $GITHUB/maldevel/EmailHarvester.git && cd EmailHarvester && pip3 install -r requirements.txt && cd $WORKDIR
 #git clone $GITHUB/vaguileradiaz/tinfoleak.git
+cd $WORKDIR
 echo "Done"

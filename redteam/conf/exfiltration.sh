@@ -20,4 +20,5 @@ git clone $GITHUB/Viralmaniar/Powershell-RAT.git
 git clone $GITHUB/ytisf/PyExfil.git && pip3 install py2exe && pip3 install -r requirements3.txt
 cd $WORKDIR
 git clone $GITHUB/SECFORCE/Tunna.git
+cd $WORKDIR
 echo "Done"

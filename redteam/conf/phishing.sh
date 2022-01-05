@@ -21,4 +21,5 @@ git clone $GITHUB/initstring/evil-ssdp.git
 git clone $GITHUB/gophish/gophish.git && cd gophish && go build && cd $WORKDIR
 git clone $GITHUB/mandiant/ReelPhish.git && cd ReelPhish && pip3 install -r requirements.txt && cd $WORKDIR
 git clone $GITHUB/ustayready/CredSniper.git && cd CredSniper && pip3 install -r requirements.txt
+cd $WORKDIR
 echo "Done"

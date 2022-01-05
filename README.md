@@ -212,11 +212,13 @@ Split into categories, each script installs a defined toolkit for all red team p
 * PostExploitation
 
   * Empire Framework 4
+  * Starkiller
   * StarFighters
   * Pupy
   * gcat
   * Merlin
   * weevely
+  * Powersploit
 * Privilege Escalation
 
   * BeRoot
