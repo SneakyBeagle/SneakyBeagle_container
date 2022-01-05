@@ -6,21 +6,22 @@ GITHUB="https://github.com"
 mkdir $WORKDIR
 
 echo "Installing vulnerability scan tools"
-apt update && apt install -y libsasl2-dev libldap2-dev
+apt update && apt install -y libsasl2-dev libldap2-dev golang-go
 cd $WORKDIR
-git clone $GITHUB/SecureAuthCorp/impacket.git
-#git clone $GITHUB/CVE-2021-44228-Scanner.git
+git clone $GITHUB/SecureAuthCorp/impacket.git && cd SecureAuthCorp/impacket.git && python3 -m pip install . && cd $WORKDIR
 git clone $GITHUB/darkarnium/Log4j-CVE-Detect.git
-git clone $GITHUB/chenjj/espoofer.git
-git clone $GITHUB/GlobalCyberAlliance/DomainSecurityScanner.git
-git clone $GITHUB/vavkamil/dkimsc4n.git
+git clone $GITHUB/chenjj/espoofer.git && cd chenjj/espoofer && pip3 install -r requirements.txt && cd $WORKDIR
+git clone $GITHUB/GlobalCyberAlliance/DomainSecurityScanner.git && cd GlobalCyberAlliance/DomainSecurityScanner && make && cd $WORKDIR
+git clone $GITHUB/vavkamil/dkimsc4n.git && cd vavkamil/dkimsc4n.git && pip3 install -r requirements.txt && cd $WORKDIR
 git clone $GITHUB/drwetter/testssl.sh.git
-git clone $GITHUB/projectdiscovery/nuclei.git
-cd $WORKDIR/projectdiscovery && \ 
-    cd nuclei/v2/cmd/nuclei; \
-    go build; \
-    mv nuclei /usr/local/bin/; \
-    nuclei -version;
-    nuclei -ut;
+#git clone $GITHUB/projectdiscovery/nuclei.git
+#cd $WORKDIR/projectdiscovery && \ 
+#    cd nuclei/v2/cmd/nuclei; \
+#    go build; \
+#    mv nuclei /usr/local/bin/; \
+#    nuclei -version;
+#    nuclei -ut;
+go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
+nuclei -ut
 cd $WORKDIR
 echo "Done"
