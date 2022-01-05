@@ -59,7 +59,7 @@ fi
 # The following block is surrounded by two delimiters.
 # These delimiters must not be modified. Thanks.
 # START KALI CONFIG VARIABLES
-PROMPT_ALTERNATIVE=twoline
+PROMPT_ALTERNATIVE=backtrack
 NEWLINE_BEFORE_PROMPT=yes
 # STOP KALI CONFIG VARIABLES
 
@@ -82,6 +82,10 @@ if [ "$color_prompt" = yes ]; then
             PS1='${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV)) }${debian_chroot:+($debian_chroot)}'$info_color'\u@\h\[\033[00m\]:'$prompt_color'\[\033[01m\]\w\[\033[00m\]\$ ';;
         backtrack)
             PS1='${VIRTUAL_ENV:+($(basename $VIRTUAL_ENV)) }${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ ';;
+	custom)
+	    clr_w='\[\033[12;36m\]' # colour working dir
+	    rest='\[\033[00;00m\]' # reset
+	    PS1="[\[\033[1;41m\]\u\[\033[0;1;7m\]@\[\033[0;1;41m\]\h\[\033[0m\] $clr_w\w$rest]!# " # root
     esac
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '

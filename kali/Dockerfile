@@ -20,6 +20,9 @@ RUN mkdir /usr/share/wordlists
 RUN curl https://getcroc.schollz.com | bash
 RUN pip install httpx[cli]
 
+# Set bash as default
+RUN chsh -s /bin/bash
+
 # Scripts
 RUN mkdir /root/scripts
 COPY files/*.sh /root/scripts/
