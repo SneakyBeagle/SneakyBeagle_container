@@ -37,3 +37,13 @@ services:
     restart: always
     env_file:
       - .env
+  infectionmonkey:
+    image: sneakymonkey
+    container_name: infectionmonkey
+    restart: always
+    build:
+      context: ./infectionmonkey
+      args: 
+        MONKEYHOSTPORT: ${MONKEYHOSTPORT}
+    env_file:
+      - .env
