@@ -14,7 +14,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y net-tools apt-uti
     wget vim gnupg2 postgresql python3-venv apt-transport-https lsb-release libreadline-dev libpq5 libpq-dev readline-common libsqlite3-dev libpcap-dev \
     subversion git-core autoconf zlib1g-dev libxml2-dev libxslt1-dev libyaml-dev ruby1.9.1 nmap openssh-server zsh iputils-ping netdiscover hping3 \
     netcat-traditional gobuster iproute2 iputils-arping dnsutils tcpdump powershell\
-    
+
 # RedTeamToolkit 
 mkdir /root/RedTeamToolkit
 COPY conf/*.sh /root/RedTeamToolkit/
