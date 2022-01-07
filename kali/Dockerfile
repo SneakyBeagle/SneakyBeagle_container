@@ -10,12 +10,12 @@ RUN apt-get update && apt-get install -y gpg && \
     nikto wget ssh net-tools git nfs-common tcpdump seclists terminator python3-poetry vim netdiscover iptraf-ng kali-archive-keyring
 
 # Configuration files
-COPY conf/.vimrc /root/.vimrc
-COPY conf/.bashrc /root/.bashrc
-COPY conf/sshd_config /etc/ssh/sshd_config
+COPY files/.vimrc /root/.vimrc
+COPY files/.bashrc /root/.bashrc
+COPY files/sshd_config /etc/ssh/sshd_config
 
 ## UNCOMMENT TO INSTALL OPTIONAL
-#COPY conf/install_optional.sh /root/install_optional.sh
+#COPY files/install_optional.sh /root/install_optional.sh
 #RUN chmod +x /root/install_optional.sh && /root/install_optional.sh && rm /root/install_optional.sh
 
 # Some more custom tools
@@ -23,14 +23,7 @@ RUN mkdir /root/tools && mkdir /usr/share/wordlists && curl https://getcroc.scho
 RUN git clone https://github.com/chopicalqui/KaliIntelligenceSuite.git /opt/kaliintelsuite && cd /opt/kaliintelsuite && pip3 install -r requirements.txt && \
     python3 -m pip install cachecontrol && export POETRY_VIRTUALENVS_IN_PROJECT=true && export POETRY_VIRTUALENVS_PATH=/opt/kaliintelsuite/.venv/ && \
     poetry install --no-root --no-dev 
-#   /opt/kaliintelsuite/kis/kismanage.py database --setup && kismanage database --test
 
-# setup for ssh (change password ASAP)
-RUN echo "root:$SSHPASSWORD" | chpasswd && service ssh start
-EXPOSE 22
-
-# upgrade packages
-#RUN apt-get upgrade -y
 
 # Cleanup
 RUN touch /root/.hushlogin && apt-get autoremove -y && apt-get autoclean -y
