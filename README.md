@@ -99,7 +99,11 @@ docker-compose up -d kali
 docker-compose up -d redteam
 ```
 
-The Infection Monkey container is executed by an independent script, that downloads required files and executes them.
+The Infection Monkey container is executed by an independent script, located under infectionmonkey/ directory, that downloads required files and executes them.
+
+```
+sudo infection_docker.sh
+```
 
 # Stop containers
 
