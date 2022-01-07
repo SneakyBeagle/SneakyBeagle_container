@@ -40,7 +40,7 @@ A number of optional tools can be installed in the Kali container. This is disab
 
 ```
 ## UNCOMMENT TO INSTALL OPTIONAL
-#COPY conf/install_optional.sh /root/install_optional.sh
+#COPY files/install_optional.sh /root/install_optional.sh
 #RUN chmod +x /root/install_optional.sh && /root/install_optional.sh && rm /root/install_optional.sh
 ```
 
