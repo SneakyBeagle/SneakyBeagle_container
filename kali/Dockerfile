@@ -19,7 +19,6 @@ COPY files/sshd_config /etc/ssh/sshd_config
 #RUN chmod +x /root/install_optional.sh && /root/install_optional.sh && rm /root/install_optional.sh
 
 # Some more custom tools
-<<<<<<< HEAD
 RUN mkdir /root/tools && mkdir /usr/share/wordlists && curl https://getcroc.schollz.com | bash
 RUN git clone https://github.com/chopicalqui/KaliIntelligenceSuite.git /opt/kaliintelsuite && cd /opt/kaliintelsuite && pip3 install -r requirements.txt && \
     python3 -m pip install cachecontrol httpx[cli] && export POETRY_VIRTUALENVS_IN_PROJECT=true && export POETRY_VIRTUALENVS_PATH=/opt/kaliintelsuite/.venv/ && \
@@ -32,13 +31,6 @@ RUN chsh -s /bin/bash
 # Scripts
 RUN mkdir /root/scripts
 COPY files/*.sh /root/scripts/
-
-# setup for ssh (change password ASAP)
-RUN echo "root:$SSHPASSWORD" | chpasswd && service ssh start
-EXPOSE 22
-
-# upgrade packages
-#RUN apt-get upgrade -y
 
 # Cleanup
 RUN touch /root/.hushlogin && apt-get autoremove -y && apt-get autoclean -y
