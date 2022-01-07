@@ -5,7 +5,7 @@ ARG SSHPASSWORD
 
 # main setup and installation
 RUN apt-get update && apt-get install -y curl netcat-traditional nmap gobuster python3 python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois \
-    nikto wget ssh net-tools git nfs-common tcpdump seclists terminator
+    nikto wget ssh net-tools git nfs-common tcpdump seclists terminator python3-poetry
 
 # Configuration files
 COPY conf/.vimrc /root/.vimrc
@@ -18,6 +18,8 @@ COPY conf/sshd_config /etc/ssh/sshd_config
 
 # Some more custom tools
 RUN mkdir /root/tools && mkdir /usr/share/wordlists && curl https://getcroc.schollz.com | bash
+RUN git clone https://github.com/chopicalqui/KaliIntelligenceSuite.git /opt/kaliintelsuite && cd /opt/kaliintelsuite && export POETRY_VIRTUALENVS_IN_PROJECT=true && \
+    export POETRY_VIRTUALENVS_PATH=/opt/kaliintelsuite/.venv/ && poetry install --no-root --no-dev
 
 # setup for ssh (change password ASAP)
 RUN echo "root:$SSHPASSWORD" | chpasswd && service ssh start
