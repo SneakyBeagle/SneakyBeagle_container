@@ -19,7 +19,8 @@ COPY conf/sshd_config /etc/ssh/sshd_config
 # Some more custom tools
 RUN mkdir /root/tools && mkdir /usr/share/wordlists && curl https://getcroc.schollz.com | bash
 RUN git clone https://github.com/chopicalqui/KaliIntelligenceSuite.git /opt/kaliintelsuite && cd /opt/kaliintelsuite && pip3 install -r requirements.txt && \
-    export POETRY_VIRTUALENVS_IN_PROJECT=true && export POETRY_VIRTUALENVS_PATH=/opt/kaliintelsuite/.venv/ && poetry install --no-root --no-dev 
+    python3 -m pip install cachecontrol && export POETRY_VIRTUALENVS_IN_PROJECT=true && export POETRY_VIRTUALENVS_PATH=/opt/kaliintelsuite/.venv/ && \
+    poetry install --no-root --no-dev 
 #   /opt/kaliintelsuite/kis/kismanage.py database --setup && kismanage database --test
 
 # setup for ssh (change password ASAP)
