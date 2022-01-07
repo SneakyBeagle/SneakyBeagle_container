@@ -32,3 +32,5 @@ EXPOSE 22
 
 # Cleanup
 RUN touch /root/.hushlogin && apt-get autoremove -y && apt-get autoclean -y
+
+WORKDIR /root/RedTeamToolkit

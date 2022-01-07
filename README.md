@@ -63,6 +63,21 @@ Or build a specific service, like for example only Nessus, by running
 ```
 docker-compose build nessus
 ```
+Instead of building them, you can also download prebuilt images for kali and redteam with (step 3 can be ignored in this case):
+
+```
+docker pull dvd42/sneakykali
+
+docker pull dvd42/sneakyredteam
+
+```
+and run them with 
+
+```
+docker run dvd42/sneakykali
+
+docker run dvd42/sneakyredteam
+```
 
 ## Step 3:
 
@@ -84,7 +99,11 @@ docker-compose up -d kali
 docker-compose up -d redteam
 ```
 
-The Infection Monkey container is executed by an independent script, that downloads required files and executes them.
+The Infection Monkey container is executed by an independent script, located under infectionmonkey/ directory, that downloads required files and executes them.
+
+```
+sudo infection_docker.sh
+```
 
 # Stop containers
 
