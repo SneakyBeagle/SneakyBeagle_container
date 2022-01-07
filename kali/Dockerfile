@@ -1,6 +1,6 @@
 FROM kalilinux/kali-bleeding-edge:latest 
-label author="SneakyBeable"
-label description="Container for Kali Linux"
+LABEL author="SneakyBeagle"
+LABEL description="Container for Kali Linux"
 ARG SSHPASSWORD
 
 # main setup and installation
