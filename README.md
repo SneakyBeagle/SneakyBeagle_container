@@ -21,7 +21,7 @@ You can also change the default port for Infection Monkey.
 As in the following example:
 
 ```
-# Nessus
+ Nessus
 ACTIVATION_CODE=AAAA-BBBB-CCCC-DDDD
 USERNAME=admin
 PASSWORD=awesomepassword
@@ -30,9 +30,6 @@ NESSUSHOSTPORT=8834
 # SSH
 SSHPASSWORD=anotherawesomepassword
 SSHHOSTPORT=2222
-
-# Infection Monkey
-MONKEYHOSTPORT=5000
 ```
 
 Optionally, you can also configure the ports that the hosting machine will expose for the services.
@@ -82,6 +79,12 @@ docker-compose up -d nessus
 ```
 docker-compose up -d kali
 ```
+
+```
+docker-compose up -d redteam
+```
+
+The Infection Monkey container is executed by an independent script, that downloads required files and executes them.
 
 # Stop containers
 
@@ -267,3 +270,7 @@ Split into categories, each script installs a defined toolkit for all red team p
   * donut
   * Icebreaker
   * Evilgrade
+
+# Infection Monkey
+
+Refer to [documentation](https://www.guardicore.com/infectionmonkey/docs/) for further information.
