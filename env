@@ -15,5 +15,3 @@ RTSSHHOSTPORT=7722
 #WORKDIR ${WORKDIR_ENV}
 #SHELL ["/bin/bash", " -c"]
 
-# Infection Monkey
-MONKEYHOSTPORT=5000

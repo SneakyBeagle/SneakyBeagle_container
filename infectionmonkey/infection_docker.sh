@@ -1,4 +1,5 @@
 #!/bin/bash
+# Execute as root
 docker load -i dk.monkeyisland.latest.tar
 docker pull mongo
 mkdir -p /var/monkey-mongo/data/db
