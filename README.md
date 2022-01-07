@@ -126,6 +126,7 @@ docker-compose rm
 - nfs-common
 - tcpdump
 - seclists
+- kali intel suite
 
 ## Optional
 
