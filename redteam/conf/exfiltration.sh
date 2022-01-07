@@ -17,8 +17,11 @@ cd $WORKDIR
 git clone $GITHUB/PaulSec/DET.git && cd DET && pip3 install -r requirements.txt
 cd $WORKDIR
 git clone $GITHUB/Viralmaniar/Powershell-RAT.git
-git clone $GITHUB/ytisf/PyExfil.git && pip3 install py2exe && pip3 install -r requirements3.txt
 cd $WORKDIR
 git clone $GITHUB/SECFORCE/Tunna.git
+cd $WORKDIR
+# git clone $GITHUB/py2exe/py2exe.git && cd py2exe && python3 setup.py install
+#cd $WORKDIR
+git clone $GITHUB/ytisf/PyExfil.git && pip3 install -r requirements3.txt
 cd $WORKDIR
 echo "Done"

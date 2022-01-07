@@ -3,3 +3,5 @@
 * Add more evasion tools
 * Add more mobile tools
 * Complete and fix installation of all tools
+* Fix py2exe installation (requires-python:>=3.6, <3.10)>) on exfiltration.sh
+* Improve container's security
