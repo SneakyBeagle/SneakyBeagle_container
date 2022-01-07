@@ -146,6 +146,7 @@ docker-compose rm
 # Red Team
 
 Split into categories, each script installs a defined toolkit for all red team phases and attack vectors.
+With sometools.sh script you can add some more tools or keep the installed ones updated.
 
 * Anon
 
@@ -156,6 +157,10 @@ Split into categories, each script installs a defined toolkit for all red team p
   * OpenVPN
   * Wireguard
   * TorGhost
+* Evasion
+
+  * UACME
+  * mortar
 * Exfiltration
 
   * Mistica

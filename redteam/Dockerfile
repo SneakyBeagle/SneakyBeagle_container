@@ -18,7 +18,8 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y net-tools apt-uti
 # RedTeamToolkit 
 RUN mkdir /root/RedTeamToolkit
 COPY conf/*.sh /root/RedTeamToolkit/
-RUN chmod +x /root/RedTeamToolkit/*.sh
+RUN chmod +x /root/RedTeamToolkit/*.sh && cd /root/RedTeamToolkit && git clone https://github.com/som3canadian/Some-Tools.git && cd Some-Tools && chmod +x sometools.sh && \
+    ./sometools.sh setup
 
 # Python env
 RUN ln -s /usr/bin/python3 /usr/bin/python
