@@ -5,3 +5,4 @@
 * Complete and fix installation of all tools
 * Fix py2exe installation (requires-python:>=3.6, <3.10)>) on exfiltration.sh
 * Improve container's security
+* Add Raspberry Pi compatible versions of the containers
