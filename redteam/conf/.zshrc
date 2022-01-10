@@ -100,8 +100,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls='ls -lah'
 
-function mkt(){
-    mkdir {burp,nmap,kickoff,content,evidences,exploits,nessus,outputs,reports,scripts,targets,tls,vulns,zap}
+#alias ls='ls -lah'
+alias myip='curl https://ifconfig.me; echo'
+
+function mkrt(){
+        mkdir {burp,osint,mobile,nmap,exploits,infra,wireless,phishing,reports,targets,vulns,zap}
 }
+
