@@ -1,14 +1,14 @@
 FROM kalilinux/kali-bleeding-edge:latest
 LABEL author="cbk914"
 LABEL description="Container for Red Team Campaign"
-ARG RTSSHPASSWORD
+ARG SSHPASSWORD
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Configuration files
-COPY conf/.vimrc /root/.vimrc
-COPY conf/.zshrc /root/.zshrc
-COPY conf/.bashrc /root/.bashrc
-COPY conf/sshd_config /etc/ssh/sshd_config
+COPY files/.vimrc /root/.vimrc
+COPY files/.zshrc /root/.zshrc
+COPY files/.bashrc /root/.bashrc
+COPY files/sshd_config /etc/ssh/sshd_config
 
 RUN apt-get update && apt-get install -y gpg && \
     gpg --keyserver pgpkeys.mit.edu --recv-key  ED444FF07D8D0BF6 && \
@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y gpg && \
 
 # RedTeamToolkit 
 RUN mkdir /root/RedTeamToolkit
-COPY conf/*.sh /root/RedTeamToolkit/
+COPY files/*.sh /root/RedTeamToolkit/
 RUN chmod +x /root/RedTeamToolkit/*.sh && cd /root/RedTeamToolkit && git clone https://github.com/som3canadian/Some-Tools.git && cd Some-Tools && chmod +x sometools.sh && \
     ./sometools.sh setup
 
@@ -27,7 +27,7 @@ RUN chmod +x /root/RedTeamToolkit/*.sh && cd /root/RedTeamToolkit && git clone h
 RUN ln -s /usr/bin/python3 /usr/bin/python
 
 # setup for ssh (change password ASAP)
-RUN echo "root:$RTSSHPASSWORD" | chpasswd && service ssh start
+RUN echo "root:$SSHPASSWORD" | chpasswd && service ssh start
 EXPOSE 22
 
 # Cleanup
