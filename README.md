@@ -1,8 +1,7 @@
 # SneakyBeagle container
-
 Simple docker compose file and Dockerfiles to build a kali container, a Nessus container, a container with a complete toolkit for Red Team operations, and a container with Infection Monkey for continuous pentesting, and attack simulations. Made to simplify deployments during pentests, vulnerability scans and Red Team Campaigns.
 
-Exposes ports 2222,5000 and 8834 on the hosting machine. Port 2222 is used to SSH into the kali container and port 8834 is used to expose Nessus. Infection Monkey exposes port 5000. Settings can be changed in the environment file, see [Step 1](#step-1).
+Exposes ports 2222, 22222, 5000 and 8834 on the hosting machine. Port 2222 is used to SSH into the kali container, port 22222 is used to SSH into the redteam container and port 8834 is used to expose Nessus. Infection Monkey exposes port 5000. Settings can be changed in the environment file, see [Step 1](#step-1).
 
 # Create containers:
 
@@ -14,9 +13,7 @@ Copy "env" to ".env".
 cp env .env
 ```
 
-Enter (in .env) the Nessus activation code, a username and a password, and a password to ssh into the kali machine.
-
-You can also change the default port for Infection Monkey.
+Enter (in .env) the Nessus activation code, a username and a password, and a password to ssh into the kali and redteam containers.
 
 As in the following example:
 
@@ -29,31 +26,34 @@ NESSUSHOSTPORT=8834
 
 # SSH
 SSHPASSWORD=anotherawesomepassword
+
+# SSH port on host for Kali
 SSHHOSTPORT=2222
+
+# SSH port on host for redteam
+RTSSHHOSTPORT=22222
 ```
 
 Optionally, you can also configure the ports that the hosting machine will expose for the services.
 
 ### [Optional] Step 1.2:
-
 A number of optional tools can be installed in the Kali container. This is disabled by default to speed up the build, but can be enabled by uncommenting the following lines in the [Kali Dockerfile](kali/Dockerfile):
-
 ```
 ## UNCOMMENT TO INSTALL OPTIONAL
 #COPY files/install_optional.sh /root/install_optional.sh
 #RUN chmod +x /root/install_optional.sh && /root/install_optional.sh && rm /root/install_optional.sh
 ```
 
+This script is copied into the container, so even if not used during build, it can be run later on the container directly.
+
 The default tools can be found [here](#kali) and the optional tools can be found [here](#optional)
 
 ## Step 2:
-
 ```
 docker-compose build [service]
 ```
 
 This will parse the docker-compose.yml file and start building the images accordingly. You can either build all services by running:
-
 ```
 docker-compose build
 ```
@@ -61,13 +61,16 @@ docker-compose build
 Or build a specific service, like for example only Nessus, by running
 
 ```
-docker-compose build nessus
+docker-compose build nessus # can also be redteam or kali
 ```
+
+### Note
 Instead of building them, you can also download prebuilt images for kali and redteam with (step 3 can be ignored in this case):
 
 ```
 docker pull dvd42/sneakykali
-
+```
+```
 docker pull dvd42/sneakyredteam
 
 ```
@@ -75,7 +78,8 @@ and run them with
 
 ```
 docker run dvd42/sneakykali
-
+```
+```
 docker run dvd42/sneakyredteam
 ```
 
@@ -87,16 +91,9 @@ Depending on what service(s) you want to run, the following commands can be used
 docker-compose up -d
 ```
 
+and running a single container:
 ```
-docker-compose up -d nessus
-```
-
-```
-docker-compose up -d kali
-```
-
-```
-docker-compose up -d redteam
+docker-compose up -d [service] # nessus, kali or redteam
 ```
 
 The Infection Monkey container is executed by an independent script, located under infectionmonkey/ directory, that downloads required files and executes them.
