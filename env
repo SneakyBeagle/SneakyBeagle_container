@@ -1,17 +1,12 @@
 # Nessus
 ACTIVATION_CODE=<activation_code>
-USERNAME=<username>
-PASSWORD=<password>
+USERNAME=<username> # CHANGEME
+PASSWORD=<password> # CHANGEME
 NESSUSHOSTPORT=8834
 
 # SSH
-SSHPASSWORD=<ssh_password>
+SSHPASSWORD=<ssh_password> # CHANGEME
 SSHHOSTPORT=2222
 
 # RedTeam
-RTSSHPASSWORD=<ssh_password>
-RTSSHHOSTPORT=7722
-#ENV WORKDIR_ENV=/redteam
-#WORKDIR ${WORKDIR_ENV}
-#SHELL ["/bin/bash", " -c"]
-
+RTSSHHOSTPORT=22222
