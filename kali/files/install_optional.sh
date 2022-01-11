@@ -43,3 +43,6 @@ echo "Installing nuclei"
 go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
 echo "Updating nuclei templates"
 nuclei -ut
+
+echo "Installing Active Directory tools"
+wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O /usr/bin/kerbrute && chmod +x /usr/bin/kerbrute
