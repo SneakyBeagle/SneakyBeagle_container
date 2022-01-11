@@ -10,24 +10,26 @@ apt-get install -y $tools
 echo "Pulling some wordlists"
 git clone https://github.com/swisskyrepo/PayloadsAllTheThings.git $wlistdir/payloadallthethings
 
-echo "Moving to $workdir and installing some more tools"
+echo "Moving to $workdir and installing some more tools from github"
 cd $workdir
 echo "Installing PacketWhisper"
 git clone https://github.com/TryCatchHCF/PacketWhisper.git
-echo "Installing nwrapy"
-git clone https://github.com/SneakyBeagle/nwrapy.git
-#cd $workdir/nwrapy/ && ./install.sh
-cd $workdir
+
 echo "Installing CreepyCrawler"
 git clone https://github.com/SneakyBeagle/CreepyCrawler.git
-#cd $workdir/CreepyCrawler/ && ./install.sh
-cd $workdir
+
 echo "Installing egressbuster"
 git clone https://github.com/trustedsec/egressbuster.git
+
 echo "Installing Bloodhound.py"
 git clone https://github.com/fox-it/BloodHound.py.git
 cd $workdir/BloodHound.py && pip install .
 cd $workdir
+
+echo "Installing some tools through pip"
+echo "Installing nwrapy"
+python3 -m pip install nwrapy
+
 echo "Installing croc"
 curl https://getcroc.schollz.com | bash
 #echo "Installing Kali Intelligence suite"
