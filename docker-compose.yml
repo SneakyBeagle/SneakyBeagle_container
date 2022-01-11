@@ -31,10 +31,9 @@ services:
     build:
       context: ./redteam
       args:
-        RTSSHPASSWORD: ${RTSSHPASSWORD}
+        SSHPASSWORD: ${SSHPASSWORD}
     ports:
       - "${RTSSHHOSTPORT}:22"
     restart: always
     env_file:
       - .env
- 
