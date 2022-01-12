@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y gpg && \
 
 # RedTeamToolkit 
 RUN mkdir /root/RedTeamToolkit
-COPY files/*.sh /root/RedTeamToolkit/
+COPY installers/*.sh /root/RedTeamToolkit/
 RUN chmod +x /root/RedTeamToolkit/*.sh && cd /root/RedTeamToolkit && git clone https://github.com/som3canadian/Some-Tools.git && cd Some-Tools && chmod +x sometools.sh && \
     ./sometools.sh setup
 
