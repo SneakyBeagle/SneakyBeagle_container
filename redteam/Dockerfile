@@ -5,10 +5,10 @@ ARG SSHPASSWORD
 ARG DEBIAN_FRONTEND=noninteractive
 
 # Configuration files
-COPY files/.vimrc /root/.vimrc
-COPY files/.zshrc /root/.zshrc
-COPY files/.bashrc /root/.bashrc
-COPY files/sshd_config /etc/ssh/sshd_config
+COPY conf/.vimrc /root/.vimrc
+COPY conf/.zshrc /root/.zshrc
+COPY conf/.bashrc /root/.bashrc
+COPY conf/sshd_config /etc/ssh/sshd_config
 
 RUN apt-get update && apt-get install -y gpg && \
     gpg --keyserver pgpkeys.mit.edu --recv-key  ED444FF07D8D0BF6 && \
@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y gpg && \
 
 # RedTeamToolkit 
 RUN mkdir /root/RedTeamToolkit
-COPY files/*.sh /root/RedTeamToolkit/
+COPY installers/*.sh /root/RedTeamToolkit/
 RUN chmod +x /root/RedTeamToolkit/*.sh && cd /root/RedTeamToolkit && git clone https://github.com/som3canadian/Some-Tools.git && cd Some-Tools && chmod +x sometools.sh && \
     ./sometools.sh setup
 
