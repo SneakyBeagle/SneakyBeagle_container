@@ -104,7 +104,7 @@ source $ZSH/oh-my-zsh.sh
 #alias ls='ls -lah'
 alias myip='curl https://ifconfig.me; echo'
 
-function mkrt(){
-        mkdir {burp,osint,mobile,nmap,exploits,infra,wireless,phishing,reports,targets,vulns,zap}
+function mkvd(){
+        mkdir {cwe,cve,capec,vulns,cpe}
 }
 
