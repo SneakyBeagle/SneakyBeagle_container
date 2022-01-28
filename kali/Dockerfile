@@ -4,9 +4,9 @@ LABEL description="Container for Kali Linux"
 ARG SSHPASSWORD
 
 # main setup and installation
-RUN apt-get update && apt-get install -y apt-utils curl netcat-traditional \
-    nmap gobuster python3 python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois \
-    nikto wget ssh net-tools git nfs-common tcpdump seclists inetutils-traceroute vim golang-go
+RUN apt-get update && apt-get install -y apt-utils curl netcat-traditional nmap gobuster python3\
+    python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois nikto wget ssh net-tools git\
+    nfs-common tcpdump seclists inetutils-traceroute vim golang-go
     
 
 # Configuration files
@@ -17,7 +17,7 @@ COPY files/sshd_config /etc/ssh/sshd_config
 
 # Scripts
 
-## UNCOMMENT TO INSTALL OPTIONAL
+## UNCOMMENT TO INSTALL OPTIONAL or install later (scripts are copied onto the container)
 #COPY files/install_optional.sh /root/install_optional.sh
 #RUN chmod +x /root/install_optional.sh && /root/install_optional.sh && rm /root/install_optional.sh
 
@@ -27,7 +27,8 @@ RUN mkdir /root/tools && mkdir /usr/share/wordlists
 #RUN curl https://getcroc.schollz.com | bash
 RUN pip install httpx[cli] && pip install nwrapy
 
-RUN go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest && /root/go/bin/nuclei -ut &&\
+RUN go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest &&\
+    /root/go/bin/nuclei -ut &&\
     go install -v github.com/glebarez/cero@latest
 
 
