@@ -22,12 +22,14 @@ COPY files/sshd_config /etc/ssh/sshd_config
 #RUN chmod +x /root/install_optional.sh && /root/install_optional.sh && rm /root/install_optional.sh
 
 # Some more custom tools
+
 RUN mkdir /root/tools && mkdir /usr/share/wordlists
 #RUN curl https://getcroc.schollz.com | bash
 RUN pip install httpx[cli] && pip install nwrapy
 
 RUN go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest && /root/go/bin/nuclei -ut &&\
     go install -v github.com/glebarez/cero@latest
+
 
 # Set bash as default
 RUN chsh -s /bin/bash
