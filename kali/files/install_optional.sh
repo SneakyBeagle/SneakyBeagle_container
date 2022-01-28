@@ -1,7 +1,8 @@
 #!/bin/bash
 
-tools="python3.9-venv man-db w3m exploitdb smbclient dsniff testssl.sh commix hydra vim mydumper seclists python2 tar tor curl python3 python3-scapy sqsh metasploit-framework netdiscover iptraf-ng kali-archive-keyring terminator python3-poetry"
 
+
+tools="python3.9-venv man-db w3m exploitdb smbclient dsniff testssl.sh commix hydra vim golang-go mydumper seclists python2 tar tor curl python3 python3-scapy sqsh metasploit-framework netdiscover iptraf-ng kali-archive-keyring terminator python3-poetry"
 workdir=/root/tools
 wlistdir=/usr/share/wordlists
 
