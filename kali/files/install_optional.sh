@@ -1,8 +1,6 @@
 #!/bin/bash
 
-
-
-tools="python3.9-venv man-db w3m exploitdb smbclient dsniff testssl.sh commix hydra vim golang-go mydumper seclists python2 tar tor curl python3 python3-scapy sqsh metasploit-framework netdiscover iptraf-ng kali-archive-keyring terminator python3-poetry"
+tools="python3.9-venv man-db w3m exploitdb smbclient dsniff testssl.sh commix hydra mydumper python2 tar tor python3-scapy sqsh metasploit-framework netdiscover iptraf-ng kali-archive-keyring terminator python3-poetry"
 workdir=/root/tools
 wlistdir=/usr/share/wordlists
 
@@ -36,14 +34,6 @@ curl https://getcroc.schollz.com | bash
 #    pip install cachecontrol && export POETRY_VIRTUALENVS_IN_PROJECT=true && \
 #    export POETRY_VIRTUALENVS_PATH=$workdir/KaliIntelligenceSuite/.venv/ && \
 #    poetry install --no-root --no-dev
-
-#echo "Installing nuclei"
-#go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest
-#echo "Updating nuclei templates"
-#nuclei -ut
-
-#echo "Installing cero"
-#go install -v github.com/glebarez/cero@latest
 
 echo "Installing Active Directory tools"
 wget https://github.com/ropnop/kerbrute/releases/download/v1.0.3/kerbrute_linux_amd64 -O /usr/bin/kerbrute && chmod +x /usr/bin/kerbrute
