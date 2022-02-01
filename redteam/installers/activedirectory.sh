@@ -13,6 +13,7 @@ pip3 install ldap3 dnspython future ldapdomaindump kerberoast
 git clone $GITHUB/SecuProject/ADenum.git && cd ADenum && pip3 install -r requirements.txt
 cd $WORKDIR
 git clone  $GITHUB/lkarlslund/adalanche.git && cd adalanche && ./build.sh
+
 cd $WORKDIR
 git clone $GITHUB/DanMcInerney/icebreaker.git && cd icebreaker && ./setup.sh && pipenv install --three && pipenv shell
 cd $WORKDIR
