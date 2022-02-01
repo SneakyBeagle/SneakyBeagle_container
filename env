@@ -1,11 +1,11 @@
 # Nessus
-ACTIVATION_CODE=<activation_code>
-USERNAME=<username> # CHANGEME
-PASSWORD=<password> # CHANGEME
+ACTIVATION_CODE=
+USERNAME=admin # CHANGEME
+PASSWORD=superawesomepasswordthatyouwouldneverguess # CHANGEME
 NESSUSHOSTPORT=8834
 
 # SSH
-SSHPASSWORD=<ssh_password> # CHANGEME
+SSHPASSWORD=superawesomepasswordthatyouwouldneverguess2 # CHANGEME
 SSHHOSTPORT=2222
 
 # RedTeam
