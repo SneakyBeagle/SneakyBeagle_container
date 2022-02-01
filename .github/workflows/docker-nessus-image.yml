@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Docker Nessus Image CI
 
 on:
   push:
@@ -21,5 +21,5 @@ jobs:
     - name: Copy environment file
       run: cp env .env
       
-    - name: Build Kali container
-      run: docker-compose build kali
+    - name: Build Nessus container
+      run: docker-compose build nessus
