@@ -21,3 +21,11 @@ git clone $GITHUB/lgandx/Responder.git
 git clone $GITHUB/SecWiki/windows-kernel-exploits.git
 cd $WORKDIR
 echo "Done"
+git clone $GITHUB/joeammond/CVE-2021-4034.git CVE-2021-4034_python
+git clone $GITHUB/c3c/CVE-2021-4034.git CVE-2021-4034_precompiled
+git clone $GITHUB/berdav/CVE-2021-4034.git && cd CVE-2021-4034 && make
+cd $WORKDIR
+mkdir blasty-vs-pkexec2 && cd blasty-vs-pkexec2/ && curl https://haxx.in/files/blasty-vs-pkexec2.c -o blasty-vs-pkexec2.c && \
+    gcc -o blasty-vs-pkexec2.so -fPIC -shared blasty-vs-pkexec2.c -Wl,-e,entry
+cd $WORKDIR
+echo "Done"
