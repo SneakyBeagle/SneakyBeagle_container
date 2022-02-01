@@ -45,7 +45,7 @@ jobs:
       - name: Build and push Docker image
         id: build-and-push
         #uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
-        uses: pennsignals/publish_docker_compose@v0.1.0
+        uses: pennsignals/publish_docker-compose@v0.1.0
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
