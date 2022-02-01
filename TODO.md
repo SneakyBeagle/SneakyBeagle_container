@@ -7,3 +7,4 @@
 * Improve container's security
 * Add Raspberry Pi compatible versions of the containers
 * Add new container for vulnerability classification and identification [CWE](https://cwe.mitre.org/data/downloads.html) [CAPEC](https://capec.mitre.org/data/index.html) [PATTON](https://github.com/BBVA/patton) [ASVS](https://github.com/Santandersecurityresearch/asvs) [ExploitDB](https://github.com/offensive-security/exploitdb)
+* Add automated workflow for testing and publishing
