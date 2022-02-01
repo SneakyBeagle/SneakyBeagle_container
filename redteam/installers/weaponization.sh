@@ -16,6 +16,7 @@ git clone $GITHUB/bhdresh/CVE-2017-8759.git
 git clone $GITHUB/bhdresh/CVE-2017-0199.git
 git clone $GITHUB/rxwx/CVE-2017-8570.git
 git clone $GITHUB/koutto/jok3r.git && cd koutto/jok3r.git && chmod +x install-all.sh && ./install-all-sh && cd $WORKDIR
+
 git clone $GITHUB/nccgroup/demiguise.git
 git clone $GITHUB/Mr-Un1k0d3r/MaliciousMacroGenerator.git
 git clone $GITHUB/Mr-Un1k0d3r/DKMC.git && cd DKMC && mkdir output && cd $WORKDIR

@@ -15,6 +15,7 @@ pip3 install linuxprivchecker
 git clone $GITHUB/diego-treitos/linux-smart-enumeration.git && cd linux-smart-enumeration && chmod 700 lse.sh && cd $WORKDIR
 git clone $GITHUB/411Hall/JAWS.git
 git clone $GITHUB/bitsadmin/wesng.git && cd wesng && python3 wes.py --update && cd $WORKDIR
+
 git clone $GITHUB/absolomb/WindowsEnum.git
 git clone $GITHUB/cckuailong/Log4j_CVE-2021-45046.git
 git clone $GITHUB/lgandx/Responder.git
