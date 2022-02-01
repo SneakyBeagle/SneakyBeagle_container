@@ -1,4 +1,4 @@
-name: Docker Nessus Image CI
+name: Docker Redteam Image CI
 
 on:
   push:
@@ -21,5 +21,5 @@ jobs:
     - name: Copy environment file
       run: cp env .env
       
-    - name: Build Nessus container
-      run: docker-compose build nessus
+    - name: Build Redteam container
+      run: docker-compose build redteam

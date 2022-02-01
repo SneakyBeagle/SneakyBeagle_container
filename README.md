@@ -65,7 +65,7 @@ docker-compose build nessus # can also be redteam or kali
 ```
 
 ### Note
-Instead of building them, you can also download prebuilt images for kali and redteam with (step 3 can be ignored in this case):
+Instead of building them, you can also download prebuilt images for kali and redteam with (step 3 can be ignored in this case) :
 
 ```
 docker pull dvd42/sneakykali
