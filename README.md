@@ -153,8 +153,7 @@ docker-compose rm
 - emacs-nox
 - sqlmap
 - whois
-- nikto
-- net-tools
+- niktonet-tools
 - git
 - nfs-common
 - tcpdump
@@ -162,7 +161,6 @@ docker-compose rm
 - inetutils-traceroute
 - vim
 - golang-go
-- test
 <!---END-MARK-KALI--->
 ## Optional
 
