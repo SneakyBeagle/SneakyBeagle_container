@@ -17,6 +17,7 @@ jobs:
     
     - name: Update README for Kali
       run: |
+        pip install PyGithub
         PACKAGES=$(python scripts/get_packages.py -t ${{ secrets.UPLOAD_TOKEN }} -r ${{ github.repository }} -b dev -f kali/Dockerfile)
         python scripts/update_readme.py -t ${{ secrets.UPLOAD_TOKEN }} -r ${{ github.repository }} -b dev -sm "<!---START-MARK-KALI--->" -em "<!---END-MARK-KALI--->" -c $PACKAGES
     
