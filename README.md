@@ -163,7 +163,7 @@ docker-compose rm
 - golang-go
 <!---END-MARK-KALI--->
 ## Optional
-
+<!---START-MARK-KALI-OPTIONAL--->
 - man-db
 - w3m
 - exploitdb
@@ -177,6 +177,7 @@ docker-compose rm
 - mydumper
 - PayloadsAllTheThings
 - kali-whoami
+<!---END-MARK-KALI-OPTIONAL--->
 
 # Red Team
 
