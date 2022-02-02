@@ -162,6 +162,7 @@ docker-compose rm
 - inetutils-traceroute
 - vim
 - golang-go
+- test
 <!---END-MARK-KALI--->
 ## Optional
 
