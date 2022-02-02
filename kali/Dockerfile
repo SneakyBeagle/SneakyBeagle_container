@@ -4,9 +4,10 @@ LABEL description="Container for Kali Linux"
 ARG SSHPASSWORD
 
 # main setup and installation
-RUN apt-get update && apt-get install -y apt-utils curl netcat-traditional nmap gobuster python3\
-    python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois nikto wget ssh net-tools git\
-    nfs-common tcpdump seclists inetutils-traceroute vim golang-go
+RUN (apt-get update && apt-get install -y apt-utils ssh wget curl netcat-traditional nmap\
+    gobuster python3 python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois\
+    nikto  net-tools git nfs-common tcpdump seclists inetutils-traceroute vim golang-go\
+    ) || echo "Update failed"
     
 
 # Configuration files
@@ -25,11 +26,11 @@ COPY files/sshd_config /etc/ssh/sshd_config
 
 RUN mkdir /root/tools && mkdir /usr/share/wordlists
 #RUN curl https://getcroc.schollz.com | bash
-RUN pip install httpx[cli] && pip install nwrapy
+RUN (pip install httpx[cli] && pip install nwrapy) || echo "pip installs failed"
 
-RUN go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest &&\
+RUN (go install -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei@latest &&\
     /root/go/bin/nuclei -ut &&\
-    go install -v github.com/glebarez/cero@latest
+    go install -v github.com/glebarez/cero@latest) || echo "go installs failed"
 
 
 # Set bash as default
