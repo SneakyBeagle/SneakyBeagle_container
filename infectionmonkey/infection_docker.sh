@@ -32,10 +32,9 @@ docker run \
        --detach \
        mongo:4.2
 
-# Start Monkey Island with default self-signed certificate
+# Start Monkey Island with default self-signed certificate (detached)
 docker run \
-       --tty \
-       --interactive \
+       --detach \
        --name monkey-island \
        --network=host \
        guardicore/monkey-island:1.12.0
