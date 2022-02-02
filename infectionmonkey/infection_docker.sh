@@ -4,17 +4,16 @@
 
 # Execute as root
 if [ "$EUID" -ne 0 ]; then
-    echo "Please execute as root"
-    exit 1
-fi
-
-# Update and check if wget is installed
-apt-get update
-RES=$(which wget)
-if [ -n "$RES" ]; then
-    echo "wget is installed here: $RES"
+    echo "Not updating since not being run as root. This skips some error checking."
 else
-    apt-get install wget
+    # If root, update, check if wget exists and install if not
+    apt-get update
+    RES=$(which wget)
+    if [ -n "$RES" ]; then
+	echo "wget is installed here: $RES"
+    else
+	apt-get install -y wget
+    fi
 fi
 
 # Download infectionmonkey container
