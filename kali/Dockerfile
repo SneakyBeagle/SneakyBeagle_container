@@ -3,12 +3,12 @@ LABEL author="SneakyBeagle"
 LABEL description="Container for Kali Linux"
 ARG SSHPASSWORD
 
-# main setup and installation
-RUN (apt-get update && apt-get install -y apt-utils ssh wget curl netcat-traditional nmap\
+ARG packages="apt-utils ssh wget curl netcat-traditional nmap\
     gobuster python3 python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois\
-    nikto  net-tools git nfs-common tcpdump seclists inetutils-traceroute vim golang-go\
-    ) || echo "Update failed"
-    
+    nikto  net-tools git nfs-common tcpdump seclists inetutils-traceroute vim golang-go"
+
+# main setup and installation
+RUN (apt-get update && apt-get install -y $packages) || echo "Update failed"
 
 # Configuration files
 COPY files/.vimrc /root/.vimrc
