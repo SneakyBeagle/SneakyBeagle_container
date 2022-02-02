@@ -139,6 +139,7 @@ docker-compose rm
 ## Kali
 <!---START-MARK-KALI--->
 - apt-utils
+- apt-utils
 - ssh
 - wget
 - curl
