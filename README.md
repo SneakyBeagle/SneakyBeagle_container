@@ -3,6 +3,7 @@
 ![Nessus Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-nessus-image.yml/badge.svg)
 ![Redteam Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-redteam-image.yml/badge.svg)
 ![InfectionMonkey Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-infectionmonkey-image.yml/badge.svg)
+[![Update README with installed packages](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/update-readme.yml/badge.svg)](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/update-readme.yml)
 ![Published containers](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-publish.yml/badge.svg)
 
 Simple docker compose file and Dockerfiles to build a kali container, a Nessus container, a container with a complete toolkit for Red Team operations, and a container with Infection Monkey for continuous pentesting, and attack simulations. Made to simplify deployments during pentests, vulnerability scans and Red Team Campaigns.
