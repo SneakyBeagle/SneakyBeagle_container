@@ -3,3 +3,6 @@
 *.env*
 *.vscode*
 .dccache
+*.tgz
+*.tar
+*infectionmonkey/README.md
