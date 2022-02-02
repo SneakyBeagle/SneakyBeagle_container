@@ -165,6 +165,7 @@ docker-compose rm
 <!---END-MARK-KALI--->
 ## Optional
 <!---START-MARK-KALI-OPTIONAL--->
+- python3.9-venv
 - man-db
 - w3m
 - exploitdb
@@ -173,11 +174,18 @@ docker-compose rm
 - testssl.sh
 - commix
 - hydra
-- vim
-- golang-go
 - mydumper
-- PayloadsAllTheThings
-- kali-whoami
+- python2
+- tar
+- tor
+- python3-scapy
+- sqsh
+- metasploit-framework
+- netdiscover
+- iptraf-ng
+- kali-archive-keyring
+- terminator
+- python3-poetry
 <!---END-MARK-KALI-OPTIONAL--->
 
 # Red Team
