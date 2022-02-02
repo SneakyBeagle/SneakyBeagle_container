@@ -138,6 +138,9 @@ docker-compose rm
 
 ## Kali
 <!---START-MARK-KALI--->
+- apt-utils
+- ssh
+- wget
 - curl
 - netcat-traditional
 - nmap
@@ -151,14 +154,15 @@ docker-compose rm
 - sqlmap
 - whois
 - nikto
-- wget
-- ssh
 - net-tools
 - git
 - nfs-common
 - tcpdump
 - seclists
-- kali intel suite
+- inetutils-traceroute
+- vim
+- golang-go
+- test
 <!---END-MARK-KALI--->
 ## Optional
 
