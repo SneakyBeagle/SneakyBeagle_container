@@ -137,7 +137,7 @@ docker-compose rm
 # Installed tools
 
 ## Kali
-
+<!---START-MARK-KALI--->
 - curl
 - netcat-traditional
 - nmap
@@ -159,7 +159,7 @@ docker-compose rm
 - tcpdump
 - seclists
 - kali intel suite
-
+<!---END-MARK-KALI--->
 ## Optional
 
 - man-db
