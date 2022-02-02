@@ -2,11 +2,41 @@
 ![Kali Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-kali-image.yml/badge.svg)
 ![Nessus Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-nessus-image.yml/badge.svg)
 ![Redteam Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-redteam-image.yml/badge.svg)
+![InfectionMonkey Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-infectionmonkey-image.yml/badge.svg)
 ![Published containers](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-publish.yml/badge.svg)
 
 Simple docker compose file and Dockerfiles to build a kali container, a Nessus container, a container with a complete toolkit for Red Team operations, and a container with Infection Monkey for continuous pentesting, and attack simulations. Made to simplify deployments during pentests, vulnerability scans and Red Team Campaigns.
 
 Exposes ports 2222, 22222, 5000 and 8834 on the hosting machine. Port 2222 is used to SSH into the kali container, port 22222 is used to SSH into the redteam container and port 8834 is used to expose Nessus. Infection Monkey exposes port 5000. Settings can be changed in the environment file, see [Step 1](#step-1).
+
+# Pull existing containers:
+
+Instead of building them, you can also download prebuilt images with the following commands:
+
+(The tag should be added based on the latest (or preferred) version found in the [packages](https://github.com/orgs/SneakyBeagle/packages?repo_name=SneakyBeagle_container).)
+```
+docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakykali:<tag>
+```
+```
+docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakyredteam:<tag>
+```
+```
+docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakynessus:<tag>
+```
+
+and run them with 
+
+```
+docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakykali:<tag>
+```
+```
+docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakyredteam:<tag>
+```
+```
+docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakynessus:<tag>
+```
+
+This will result in a setup that uses the credentials and settings that can be found in the example [env](env) file. This means that you should change the credentials as soon as possible and will use the free version of nessus, since no activation code is provided (obviously...).
 
 # Create containers:
 
@@ -68,34 +98,6 @@ Or build a specific service, like for example only Nessus, by running
 ```
 docker-compose build nessus # can also be redteam or kali
 ```
-
-### Note
-Instead of building them, you can also download prebuilt images with the following commands (step 3 can be ignored in this case):
-
-The tag should be added based on the latest (or preferred) version found in the [packages](https://github.com/orgs/SneakyBeagle/packages?repo_name=SneakyBeagle_container).
-```
-docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakykali:<tag>
-```
-```
-docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakyredteam:<tag>
-```
-```
-docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakynessus:<tag>
-```
-
-and run them with 
-
-```
-docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakykali:<tag>
-```
-```
-docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakyredteam:<tag>
-```
-```
-docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakynessus:<tag>
-```
-
-This will result in a setup that uses the credentials and settings that can be found in the example [env](env) file. This means that you should change the credentials as soon as possible and will use the free version of nessus, since no activation code is provided (obviously).
 
 ## Step 3:
 
