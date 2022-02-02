@@ -69,23 +69,32 @@ docker-compose build nessus # can also be redteam or kali
 ```
 
 ### Note
-Instead of building them, you can also download prebuilt images for kali and redteam with (step 3 can be ignored in this case):
+Instead of building them, you can also download prebuilt images with the following commands (step 3 can be ignored in this case):
 
+The tag should be added based on the latest (or preferred) version found in the [packages](https://github.com/orgs/SneakyBeagle/packages?repo_name=SneakyBeagle_container).
 ```
-docker pull dvd42/sneakykali
+docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakykali:<tag>
 ```
 ```
-docker pull dvd42/sneakyredteam
+docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakyredteam:<tag>
+```
+```
+docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakynessus:<tag>
+```
 
-```
 and run them with 
 
 ```
-docker run dvd42/sneakykali
+docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakykali:<tag>
 ```
 ```
-docker run dvd42/sneakyredteam
+docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakyredteam:<tag>
 ```
+```
+docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakynessus:<tag>
+```
+
+This will result in a setup that uses the credentials and settings that can be found in the example [env](env) file. This means that you should change the credentials as soon as possible and will use the free version of nessus, since no activation code is provided (obviously).
 
 ## Step 3:
 
