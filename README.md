@@ -330,4 +330,6 @@ With sometools.sh script you can add some more tools or keep the installed ones 
 
 # Infection Monkey
 
+There is a script included in this repository that allows you to easily setup a Monkey Island container. This script can be found [here](infectionmonkey/infection_docker.sh). Running this script will attempt to stop and remove existing Monkey Island and mongo-db (named "monkey-mongo") containers, and create and run new ones.
+
 Refer to [documentation](https://www.guardicore.com/infectionmonkey/docs/) for further information.
