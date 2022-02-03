@@ -195,8 +195,46 @@ With sometools.sh script you can add some more tools or keep the installed ones 
 
 * General
 <!---START-MARK-RT--->
-
-
+- openssh-server
+- zsh
+- net-tools
+- apt-utils
+- python3
+- python3-dev
+- build-essential
+- python3-pip
+- redis-server
+- terminatorwget
+- vim
+- gnupg2
+- postgresql
+- python3-venv
+- apt-transport-https
+- lsb-release
+- libreadline-dev
+- libpq5
+- libpq-dev
+- readline-common
+- libsqlite3-dev
+- libpcap-devsubversion
+- git-core
+- autoconf
+- zlib1g-dev
+- libxml2-dev
+- libxslt1-dev
+- libyaml-dev
+- ruby1.9.1
+- nmap
+- iputils-ping
+- netdiscover
+- hping3netcat-traditional
+- gobuster
+- iproute2
+- iputils-arping
+- dnsutils
+- tcpdump
+- powershell
+- curl
 <!---END-MARK-RT--->
 
 * Anon
