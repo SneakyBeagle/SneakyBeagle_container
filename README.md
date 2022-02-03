@@ -194,6 +194,7 @@ Split into categories, each script installs a defined toolkit for all red team p
 With sometools.sh script you can add some more tools or keep the installed ones updated.
 
 * General
+
 <!---START-MARK-RT--->
 - openssh-server
 - zsh
@@ -238,6 +239,7 @@ With sometools.sh script you can add some more tools or keep the installed ones 
 <!---END-MARK-RT--->
 
 * Anon
+
 <!---START-MARK-RT-ANON--->
   * TOR
   * TORsocks
@@ -247,6 +249,7 @@ With sometools.sh script you can add some more tools or keep the installed ones 
   * Wireguard
   * TorGhost
 <!---END-MARK-RT-ANON--->
+
 * Evasion
 
   * UACME
