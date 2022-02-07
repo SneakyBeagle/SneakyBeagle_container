@@ -4,3 +4,4 @@
 .dccache
 .vscode
 settings.json
+*.swp
