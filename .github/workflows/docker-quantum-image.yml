@@ -1,0 +1,25 @@
+name: Docker Quantum Image CI
+
+on:
+  push:
+    branches: [ dev ]
+  pull_request:
+    branches: [ dev ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Docker compose version
+      run: docker-compose --version
+      
+    - name: Copy environment file
+      run: cp env .env
+      
+    - name: Build Quantum container
+      run: docker-compose build quantum

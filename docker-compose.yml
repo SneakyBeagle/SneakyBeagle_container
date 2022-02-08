@@ -1,18 +1,33 @@
 version: "3"
 services:
+  
   kali:
     image: sneakykali
     container_name: sneakybeagle
-    restart: always
+    restart: unless-stopped
     build:
       context: ./kali
       args:
         SSHPASSWORD: ${SSHPASSWORD}
     ports:
       - "${SSHHOSTPORT}:22"
+    hostname: kali
+    
+  quantum:
+    image: sneakyquantum
+    container_name: quantum
+    restart: unless-stopped
+    env_file:
+      - .env
+    build:
+      context: ./quantum
+      args:
+        SSHPASSWORD: ${SSHPASSWORD}
+    hostname: quantum
+    command: ["-s", "${SERVER}", "-p", "${SERVERPORT}", "-u", "${SERVERUSER}", "-r", "kali"]
+    
   nessus:
     image: sneakynessus
-    #image: tenableofficial/nessus
     container_name: nessus
     build:
       context: ./nessus
@@ -20,20 +35,23 @@ services:
         ACTIVATION_CODE: ${ACTIVATION_CODE}
         USERNAME: ${USERNAME}
         PASSWORD: ${PASSWORD}
-    restart: always
+    restart: unless-stopped
+    hostname: nessus
     env_file:
       - .env
     ports:
       - "${NESSUSHOSTPORT}:8834"
+      
   redteam:
     image: sneakyredteam
     container_name: redteam
+    hostname: redteam
     build:
       context: ./redteam
       args:
         SSHPASSWORD: ${SSHPASSWORD}
     ports:
       - "${RTSSHHOSTPORT}:22"
-    restart: always
+    restart: unless-stopped
     env_file:
       - .env

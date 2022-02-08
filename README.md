@@ -6,7 +6,7 @@
 [![Update README with installed packages](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/update-readme.yml/badge.svg)](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/update-readme.yml)
 ![Published containers](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-publish.yml/badge.svg)
 
-Simple docker compose file and Dockerfiles to build a kali container, a Nessus container, a container with a complete toolkit for Red Team operations, and a container with Infection Monkey for continuous pentesting, and attack simulations. Made to simplify deployments during pentests, vulnerability scans and Red Team Campaigns.
+Simple docker compose file and Dockerfiles to build a Kali container, a Quantum Tunnel container, a Nessus container, a container with a complete toolkit for Red Team operations, and a container with Infection Monkey for continuous pentesting, and attack simulations. Made to simplify deployments during pentests, vulnerability scans and Red Team Campaigns.
 
 Exposes ports 2222, 22222, 5000 and 8834 on the hosting machine. Port 2222 is used to SSH into the kali container, port 22222 is used to SSH into the redteam container and port 8834 is used to expose Nessus. Infection Monkey exposes port 5000. Settings can be changed in the environment file, see [Step 1](#step-1).
 
@@ -24,6 +24,9 @@ docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.s
 ```
 docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakynessus:<tag>
 ```
+```
+docker pull ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakyquantum:<tag>
+```
 
 and run them with 
 
@@ -35,6 +38,9 @@ docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sn
 ```
 ```
 docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakynessus:<tag>
+```
+```
+dpcker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakyquantum:<tag>
 ```
 
 This will result in a setup that uses the credentials and settings that can be found in the example [env](env) file. This means that you should change the credentials as soon as possible and will use the free version of nessus, since no activation code is provided (obviously...).
@@ -49,12 +55,17 @@ Copy "env" to ".env".
 cp env .env
 ```
 
-Enter (in .env) the Nessus activation code, a username and a password, and a password to ssh into the kali and redteam containers.
+Enter (in .env) the server address and port that you opened externally (if you want to access these containers remotely), the Nessus activation code, a username and a password for nessus, and a password to ssh into the kali and redteam containers.
 
 As in the following example:
 
 ```
- Nessus
+# Quantum Tunnel
+SERVER=example.com
+SERVERPORT=22 # Server SSH port to connect to, probably good to do 443 to avoid firewall rules
+SERVERUSER=root
+
+# Nessus
 ACTIVATION_CODE=AAAA-BBBB-CCCC-DDDD
 USERNAME=admin
 PASSWORD=awesomepassword
@@ -97,7 +108,7 @@ docker-compose build
 Or build a specific service, like for example only Nessus, by running
 
 ```
-docker-compose build nessus # can also be redteam or kali
+docker-compose build nessus # can also be redteam or kali or quantum
 ```
 
 ## Step 3:
@@ -110,7 +121,7 @@ docker-compose up -d
 
 and running a single container:
 ```
-docker-compose up -d [service] # nessus, kali or redteam
+docker-compose up -d [service] # nessus, kali or redteam or quantum
 ```
 
 The Infection Monkey container is executed by an independent script, located under infectionmonkey/ directory, that downloads required files and executes them.
@@ -135,9 +146,11 @@ To remove the containers, once stopped, run:
 docker-compose rm
 ```
 
-# Installed tools
+# Container information
 
 ## Kali
+A Kali container that opens a SSH port on the host and has a number of tools already installed.
+
 <!---START-MARK-KALI--->
 - apt-utils
 - ssh
@@ -163,7 +176,9 @@ docker-compose rm
 - vim
 - golang-go
 <!---END-MARK-KALI--->
-## Optional
+
+### Optional
+These optional tools are installed by a script copied onto the kali host
 <!---START-MARK-KALI-OPTIONAL--->
 - python3.9-venv
 - man-db
@@ -188,8 +203,10 @@ docker-compose rm
 - python3-poetry
 <!---END-MARK-KALI-OPTIONAL--->
 
-# Red Team
+## Quantum Tunnel
+The Quantum Tunnel host uses [Quantum Tunnel](https://github.com/SneakyBeagle/quantum_tunnel), a reverse forward ssh tunneler written in Go. This creates a tunnel from the server you specify in the .env file and the kali host, meaning you can access the kali host from within the external server, even with restrictive firewall/NAT rules in place.
 
+## Red Team
 Split into categories, each script installs a defined toolkit for all red team phases and attack vectors.
 With sometools.sh script you can add some more tools or keep the installed ones updated.
 
@@ -369,7 +386,7 @@ With sometools.sh script you can add some more tools or keep the installed ones 
   * Icebreaker
   * Evilgrade
 
-# Infection Monkey
+## Infection Monkey
 
 There is a script included in this repository that allows you to easily setup a Monkey Island container. This script can be found [here](infectionmonkey/infection_docker.sh). Running this script will attempt to stop and remove existing Monkey Island and mongo-db (named "monkey-mongo") containers, and create and run new ones.
 

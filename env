@@ -1,3 +1,8 @@
+# Quantum Tunnel
+SERVER=example.com
+SERVERPORT=22 # Server SSH port to connect to, probably good to do 443 to avoid firewall rules
+SERVERUSER=root
+
 # Nessus
 ACTIVATION_CODE=
 USERNAME=admin # CHANGEME
