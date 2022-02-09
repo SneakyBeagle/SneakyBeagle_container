@@ -22,7 +22,7 @@ jobs:
       run: cp env .env
 
     - name: Create fake ssh keys
-      run: touch quantum/files/id_rsa quantum/files/id_rsa.pub
+      run: mkdir -p /quantum/files && touch quantum/files/id_rsa quantum/files/id_rsa.pub
       
     - name: Build Quantum container
       run: docker-compose build quantum
