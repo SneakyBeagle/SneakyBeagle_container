@@ -1,5 +1,6 @@
 # SneakyBeagle container
 ![Kali Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-kali-image.yml/badge.svg)
+![Quantum Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-quantum-image.yml/badge.svg)
 ![Nessus Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-nessus-image.yml/badge.svg)
 ![Redteam Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-redteam-image.yml/badge.svg)
 ![InfectionMonkey Build](https://github.com/SneakyBeagle/SneakyBeagle_container/actions/workflows/docker-infectionmonkey-image.yml/badge.svg)
