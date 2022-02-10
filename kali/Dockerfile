@@ -4,7 +4,7 @@ LABEL description="Container for Kali Linux"
 ARG SSHPASSWORD
 
 # PACKAGES #
-ARG packages="apt-utils ssh wget curl netcat-traditional nmap\
+ARG packages="ssh apt-utils wget curl netcat-traditional nmap\
     gobuster python3 python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois\
     nikto  net-tools git nfs-common tcpdump seclists inetutils-traceroute vim golang-go"
 # END PACKAGES #
