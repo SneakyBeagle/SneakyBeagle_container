@@ -45,6 +45,7 @@ RUN chmod +x /root/scripts/*.sh
 
 # setup for ssh
 RUN echo "root:$SSHPASSWORD" | chpasswd
+RUN if [ ! -e "/usr/sbin/sshd" ]; then apt install -y ssh; fi
 RUN service ssh start
 EXPOSE 22
 
