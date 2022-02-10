@@ -171,8 +171,8 @@ A Kali container that opens a SSH port on the host and has a number of tools alr
 
 * Installed tools:
 <!---START-MARK-KALI--->
-- apt-utils
 - ssh
+- apt-utils
 - wget
 - curl
 - netcat-traditional
