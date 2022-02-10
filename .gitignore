@@ -6,4 +6,5 @@
 *.tgz
 *.tar
 *infectionmonkey/README.md
-*id_rsa*
+*id_rsa
+*id_rsa.pub
