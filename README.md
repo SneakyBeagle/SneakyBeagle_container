@@ -96,6 +96,20 @@ This script is copied into the container, so even if not used during build, it c
 
 The default tools can be found [here](#kali) and the optional tools can be found [here](#optional)
 
+## [Optional] Step 1.3:
+If you are using the quantum tunnel container, you need to setup a SSH key pair, copy it into the right directory for the container and copy the public key to your external servers 'authorized_keys' file. Here is how to do that:
+
+On the host that will run the containers:
+```
+mkdir -p <location_of_repository>/quantum/files
+```
+Next, generate keys into this directory (without passphrase):
+```
+ssh-keygen -t rsa -q -N "" -f <location_of_repository>/quantum/files/id_rsa
+```
+
+Now copy ```<location_of_repository>/quantum/files/id_rsa.pub``` to ```$HOME/.ssh/authorized_keys``` on your external server (I would also suggest using this key to authenticate with your own machine to check if it works).
+
 ## Step 2:
 ```
 docker-compose build [service]
@@ -111,6 +125,9 @@ Or build a specific service, like for example only Nessus, by running
 ```
 docker-compose build nessus # can also be redteam or kali or quantum
 ```
+
+### Note:
+The quantum service will either use a existing public/private keypair (located in ```quantum/files/```) to authenticate to your external server, or will generate the keys if they do not exists. In either case, during the build the public key will be printed. This should be copied to your servers ```$HOME/.ssh/authorized_keys```. For more info, go back to Optional Step 1.3.
 
 ## Step 3:
 
@@ -152,6 +169,7 @@ docker-compose rm
 ## Kali
 A Kali container that opens a SSH port on the host and has a number of tools already installed.
 
+* Installed tools:
 <!---START-MARK-KALI--->
 - apt-utils
 - ssh
@@ -180,6 +198,8 @@ A Kali container that opens a SSH port on the host and has a number of tools alr
 
 ### Optional
 These optional tools are installed by a script copied onto the kali host
+
+* Optional tools:
 <!---START-MARK-KALI-OPTIONAL--->
 - python3.9-venv
 - man-db
@@ -211,7 +231,7 @@ The Quantum Tunnel host uses [Quantum Tunnel](https://github.com/SneakyBeagle/qu
 Split into categories, each script installs a defined toolkit for all red team phases and attack vectors.
 With sometools.sh script you can add some more tools or keep the installed ones updated.
 
-* General
+* General tools
 
 <!---START-MARK-RT--->
 - openssh-server
