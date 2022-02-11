@@ -25,7 +25,20 @@ services:
         SSHPASSWORD: ${SSHPASSWORD}
     hostname: quantum
     command: ["-s", "${SERVER}", "-p", "${SERVERPORT}", "-u", "${SERVERUSER}", "-r", "kali"]
-    
+
+  qnes:
+    image: sneakyquantum
+    container_name: quantumnes
+    restart: unless-stopped
+    env_file:
+      - .env
+    build:
+      context: ./quantum
+      args:
+        SSHPASSWORD: ${SSHPASSWORD}
+    hostname: quantum
+    command: ["-s", "${SERVER}", "-p", "${SERVERPORT}", "-u", "${SERVERUSER}", "-l", "8834", "-r", "nessus", "-a", "${NESSUSHOSTPORT}"]
+
   nessus:
     image: sneakynessus
     container_name: nessus
