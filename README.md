@@ -80,6 +80,9 @@ SSHHOSTPORT=2222
 
 # SSH port on host for redteam
 RTSSHHOSTPORT=22222
+
+# Storage/Volumes
+BASEVOLUME=./docker_vols/
 ```
 
 Optionally, you can also configure the ports that the hosting machine will expose for the services.

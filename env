@@ -17,4 +17,4 @@ SSHHOSTPORT=2222
 RTSSHHOSTPORT=22222
 
 # Storage/Volumes
-BASEVOLUME=/root/docker_vols/
+BASEVOLUME=./docker_vols/
