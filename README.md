@@ -41,7 +41,7 @@ docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sn
 docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakynessus:<tag>
 ```
 ```
-dpcker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakyquantum:<tag>
+docker run ghcr.io/sneakybeagle/sneakybeagle_container/sneakybeagle_container.sneakyquantum:<tag>
 ```
 
 This will result in a setup that uses the credentials and settings that can be found in the example [env](env) file. This means that you should change the credentials as soon as possible and will use the free version of nessus, since no activation code is provided (obviously...).
