@@ -15,3 +15,6 @@ SSHHOSTPORT=2222
 
 # RedTeam
 RTSSHHOSTPORT=22222
+
+# Storage/Volumes
+BASEVOLUME=/root/docker_vols/
