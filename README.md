@@ -189,7 +189,8 @@ A Kali container that opens a SSH port on the host and has a number of tools alr
 - emacs-nox
 - sqlmap
 - whois
-- niktonet-tools
+- nikto
+- net-tools
 - git
 - nfs-common
 - tcpdump
