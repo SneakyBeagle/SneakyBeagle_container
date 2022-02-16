@@ -2,6 +2,7 @@ FROM kalilinux/kali-bleeding-edge:latest
 LABEL author="SneakyBeagle"
 LABEL description="Container for Kali Linux"
 ARG SSHPASSWORD
+ARG VOLUME="/root/persistent"
 
 # PACKAGES #
 ARG packages="ssh apt-utils wget curl netcat-traditional nmap\
@@ -46,6 +47,8 @@ RUN chmod +x /root/scripts/*.sh
 # setup for ssh
 RUN echo "root:$SSHPASSWORD" | chpasswd
 RUN if [ ! -e "/usr/sbin/sshd" ]; then apt install -y ssh; fi
+RUN if [ -e "$VOLUME/authorized_keys" ]; then mkdir /root/.ssh &&\
+    cp $VOLUME/authorized_keys /root/.ssh/authorized_keys; fi
 RUN service ssh start
 EXPOSE 22
 

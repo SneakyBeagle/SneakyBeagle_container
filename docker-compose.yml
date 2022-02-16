@@ -5,6 +5,8 @@ services:
     image: sneakykali
     container_name: sneakybeagle
     restart: unless-stopped
+    volumes:
+      - ${BASEVOLUME}/kali:/root/persistent
     build:
       context: ./kali
       args:
