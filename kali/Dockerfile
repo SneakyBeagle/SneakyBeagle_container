@@ -6,7 +6,7 @@ ARG SSHPASSWORD
 # PACKAGES #
 ARG packages="ssh apt-utils wget curl netcat-traditional nmap\
     gobuster python3 python3-pip iproute2 dnsutils iputils-ping emacs-nox sqlmap whois\
-    nikto  net-tools git nfs-common tcpdump seclists inetutils-traceroute vim golang-go"
+    nikto net-tools git nfs-common tcpdump seclists inetutils-traceroute vim golang-go"
 # END PACKAGES #
 
 # main setup and installation
