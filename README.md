@@ -226,6 +226,7 @@ These optional tools are installed by a script copied onto the kali host
 - kali-archive-keyring
 - terminator
 - python3-poetry
+- bash-completion
 <!---END-MARK-KALI-OPTIONAL--->
 
 ## Quantum Tunnel
