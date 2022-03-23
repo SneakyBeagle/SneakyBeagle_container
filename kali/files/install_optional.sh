@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # PACKAGES #
-tools="python3.9-venv man-db w3m exploitdb smbclient dsniff testssl.sh commix hydra mydumper python2 tar tor python3-scapy sqsh metasploit-framework netdiscover iptraf-ng kali-archive-keyring terminator python3-poetry bash-completion"
+tools="python3.9-venv man-db w3m exploitdb smbclient dsniff testssl.sh commix hydra mydumper python2 tar tor python3-scapy sqsh metasploit-framework netdiscover iptraf-ng kali-archive-keyring terminator httpie python3-poetry bash-completion"
 # END PACKAGES #
 
 workdir=/root/tools
