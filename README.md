@@ -225,6 +225,7 @@ These optional tools are installed by a script copied onto the kali host
 - iptraf-ng
 - kali-archive-keyring
 - terminator
+- httpie
 - python3-poetry
 - bash-completion
 <!---END-MARK-KALI-OPTIONAL--->
