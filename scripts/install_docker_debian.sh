@@ -21,3 +21,5 @@ apt-get install docker-ce docker-ce-cli containerd.io
 wget https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64
 chmod +x docker-compose-linux-x86_64
 mv docker-compose-linux-x86_64 /usr/bin/docker-compose
+
+systemctl start docker && systemctl enable docker
