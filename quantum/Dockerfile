@@ -1,4 +1,4 @@
-FROM golang:latest
+FROM golang:1-bullseye
 label author="SneakyBeagle"
 label description="Container for Remote Access"
 
